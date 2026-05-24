@@ -25,6 +25,12 @@ Parse recent entries: `grep "^## \[" wiki/log.md | head -10`
 
 ---
 
+## [2026-05-24] batch-ingest | RinDig ICM + ecosystem research gap fill
+- Sources: `_raw/RinDig Interpreted-Context-Methdology.md`, `_raw/claude-obsidian-ecosystem-research.md`
+- Pages created: [[rindig-interpreted-context-methodology]], [[Interpreted Context Methodology]], [[Jake Van Clief]], [[ekadetov-llm-wiki]], [[heyitsnoah-claudesidian]], [[jacksteamdev-obsidian-mcp-tools]], [[YuNaga224-obsidian-memory-mcp]]
+- Pages updated: [[claude-obsidian-ecosystem-research]], [[index]], entities/_index, concepts/_index
+- Key insight: ICM (folder-as-agent-architecture, 520 stars) shares the layered context principle with the LLM Wiki pattern; four ecosystem entity pages that were missing from the April ingest are now filed.
+
 ## [2026-04-24] save | v1.6.0 public release notes (Teams, Karpathy-style)
 - Type: release doc + visual assets
 - Locations (new): `docs/releases/v1.6.0.md` (346 lines, 6 sections, Karpathy-style prose), `wiki/meta/dragonscale-mechanism-overview.svg` (4-mechanism diagram with shared .vault-meta/ gate), `wiki/meta/dragonscale-6-test-flow.svg` (validation timeline), `wiki/meta/dragonscale-frontier-graph.svg` (M4 candidate + 3 filed pages)
