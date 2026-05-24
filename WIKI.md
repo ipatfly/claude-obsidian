@@ -6,6 +6,88 @@
 
 ---
 
+## Active Configuration (ipatfly)
+
+> This section documents the choices made for this vault. Generic alternatives remain in the sections below.
+
+### Vault
+
+- **Path**: `~/Workspaces/claude-obsidian/`
+- **Obsidian**: v1.12.7 (macOS)
+- **Plugin version**: 1.6.0
+
+### Plugins Installed
+
+| Plugin | Role | Notes |
+|--------|------|-------|
+| **Local REST API & MCP Server** | Vault ↔ Claude Code bridge | v4.1.0, HTTP port 27123 active |
+| **NotebookNavigator** | File explorer + folder colors | Replaces Iconize + Folder Notes |
+| **Dataview** | Database queries, dashboards | |
+| **Templater** | Frontmatter auto-population | |
+| **Obsidian Git** | Auto-commit every 15 min | |
+| **Minimal Theme + Style Settings** | Dense information layout | |
+| **QuickAdd** | Macros | |
+| **Smart Connections** | Semantic search in Obsidian UI | UI-only; Claude Code does not use it |
+| **Calendar** | Periodic notes calendar | |
+| **Thino** | Daily memos | |
+| **Banners** | Note header images | |
+| **Excalidraw** | Diagrams | |
+| **Quiet Outline** | Clean outline panel | |
+
+Plugins from original recommendations **not installed**: Iconize, Folder Notes (both replaced by NotebookNavigator).
+
+### MCP Setup (Active)
+
+Uses the **native integrated MCP server** built into Local REST API v4.1.0:
+
+```bash
+claude mcp add-json obsidian '{
+  "type": "http",
+  "url": "http://127.0.0.1:27123/mcp/",
+  "headers": {
+    "Authorization": "Bearer <KEY>"
+  }
+}' --scope user
+```
+
+**Why HTTP (port 27123) instead of HTTPS (27124):** The plugin uses a self-signed certificate. Node.js (Claude Code's runtime) does not pick up macOS Keychain-trusted certs automatically, so the HTTPS endpoint fails. HTTP is enabled in plugin settings (`enableInsecureServer: true`). Acceptable on localhost only.
+
+The self-signed cert is also stored in macOS login Keychain (`security add-trusted-cert`) for `curl` and browser access via HTTPS if needed.
+
+**Status**: `claude mcp list` → `✓ Connected`
+
+### Folder Colors
+
+Colors are set via **NotebookNavigator's native `folderColors` config** in `.obsidian/plugins/notebook-navigator/data.json` — not via `vault-colors.css` `.nav-folder-title` selectors (which target the standard Obsidian file explorer, not NotebookNavigator).
+
+```json
+"folderColors": {
+  "wiki":             "#569cd6",
+  "wiki/concepts":    "#4fc1ff",
+  "wiki/domains":     "#4fc1ff",
+  "wiki/sources":     "#6a9955",
+  "wiki/questions":   "#6a9955",
+  "wiki/comparisons": "#6a9955",
+  "wiki/entities":    "#c586c0",
+  "wiki/meta":        "#569cd6",
+  "_raw":             "#606060"
+}
+```
+
+`navRainbow.folders.enabled` is set to `false` (was `true` by default — overrode semantic colors).
+
+### macOS: flock Fix
+
+`scripts/allocate-address.sh` uses `flock` for write-lock on the address counter. `flock` is Linux-only and not available on macOS. Fixed by wrapping the lock block in a `command -v flock` check — emits `WARN` and continues without lock (acceptable: single-writer per DragonScale Phase 2 spec).
+
+### DragonScale State
+
+- **Address counter**: 10 (next: `c-000010`)
+- **Addresses assigned**: `c-000001` to `c-000009`; `c-000002` reserved-unassigned
+- **Counter file**: `.vault-meta/address-counter.txt` — only writable via `scripts/allocate-address.sh` (Bash), never via Write/Edit tool (triggers PostToolUse hook)
+
+---
+
 ## What This Is
 
 You are maintaining a persistent, compounding wiki inside an Obsidian vault. You don't just answer questions. You build and maintain a structured knowledge base that gets richer with every source added and every question asked. The human curates sources and asks questions. You do all the writing, cross-referencing, filing, and maintenance.
@@ -76,7 +158,29 @@ Test: `curl -sk -H "Authorization: Bearer <KEY>" https://127.0.0.1:27124/`
 
 ### 0.4 Configure MCP Server
 
-**Option A: mcp-obsidian (REST API based, most popular)**
+> **Local REST API v4.0+ includes a native integrated MCP server.** Use Option D if you have it (check plugin version in Obsidian settings).
+
+**Option D: Native integrated MCP via HTTP ✓ (active in this vault)**
+
+Requires: Local REST API plugin v4.0+, "Enable insecure server" toggled on in plugin settings.
+
+```bash
+claude mcp add-json obsidian '{
+  "type": "http",
+  "url": "http://127.0.0.1:27123/mcp/",
+  "headers": {
+    "Authorization": "Bearer <KEY>"
+  }
+}' --scope user
+```
+
+*Why HTTP not HTTPS:* Node.js does not use macOS Keychain certs; the self-signed HTTPS cert causes `Failed to connect`. HTTP on localhost is acceptable.
+
+---
+
+**Option A: mcp-obsidian (REST API based, stdio wrapper)**
+
+Works with any Local REST API version. Handles TLS via `NODE_TLS_REJECT_UNAUTHORIZED=0`.
 
 ```bash
 claude mcp add-json obsidian-vault '{
@@ -119,15 +223,28 @@ In a Claude Code session, type `/mcp` to check connection status.
 
 Install via Settings > Community Plugins > Browse:
 
-| Plugin | Why |
-|--------|-----|
-| **Dataview** | Query vault as a database. Powers dashboards. |
-| **Templater** | Auto-populate frontmatter on note creation. |
-| **Obsidian Git** | Auto-commit every 15 minutes. Protects against data loss. |
-| **Iconize** | Visual folder icons. |
-| **Minimal Theme** | Best dark theme for dense information display. |
+| Plugin | Why | Status |
+|--------|-----|--------|
+| **Dataview** | Query vault as a database. Powers dashboards. | ✓ installed |
+| **Templater** | Auto-populate frontmatter on note creation. | ✓ installed |
+| **Obsidian Git** | Auto-commit every 15 minutes. Protects against data loss. | ✓ installed |
+| **Iconize** | Visual folder icons. | — replaced by NotebookNavigator |
+| **Minimal Theme** | Best dark theme for dense information display. | ✓ installed |
+| **NotebookNavigator** | Two-pane navigation, native folder colors, calendar. Replaces Iconize + Folder Notes. | ✓ installed |
 
-Optional: Smart Connections (semantic search), QuickAdd (macros), Folder Notes (clickable folders).
+Optional:
+
+| Plugin | Why | Status |
+|--------|-----|--------|
+| Smart Connections | Semantic search in Obsidian UI | ✓ installed (UI only, not used by Claude Code) |
+| QuickAdd | Macros, quick capture | ✓ installed |
+| Folder Notes | Clickable folder index notes | — replaced by NotebookNavigator |
+| Calendar | Periodic notes calendar | ✓ installed |
+| Thino | Daily memos | ✓ installed |
+| Banners | Note header images | ✓ installed |
+| Excalidraw | Embedded diagrams | ✓ installed |
+| Quiet Outline | Cleaner outline panel | ✓ installed |
+| Style Settings | Theme customization UI | ✓ installed |
 
 Also install the **Obsidian Web Clipper** browser extension. It converts web articles to markdown and sends them to `_raw/` in one click. Available for Chrome, Firefox, and Safari.
 

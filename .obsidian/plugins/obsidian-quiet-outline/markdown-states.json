@@ -1,1 +1,84 @@
-{}
+{
+  "WIKI.md": {
+    "scroll": 92.66438802083333,
+    "cursor": {
+      "from": {
+        "line": 2,
+        "ch": 49
+      },
+      "to": {
+        "line": 2,
+        "ch": 49
+      }
+    },
+    "expandedKeys": [
+      "item-2-1",
+      "item-1-0",
+      "item-2-9"
+    ]
+  },
+  "wiki/index.md": {
+    "scroll": 46.16572148708254,
+    "cursor": {
+      "from": {
+        "line": 31,
+        "ch": 0
+      },
+      "to": {
+        "line": 31,
+        "ch": 0
+      }
+    },
+    "expandedKeys": [
+      "item-1-0"
+    ]
+  },
+  "wiki/entities/Jake Van Clief.md": {
+    "scroll": 0,
+    "cursor": {
+      "from": {
+        "line": 16,
+        "ch": 0
+      },
+      "to": {
+        "line": 16,
+        "ch": 0
+      }
+    },
+    "expandedKeys": [
+      "item-1-0"
+    ]
+  },
+  "wiki/concepts/Interpreted Context Methodology.md": {
+    "scroll": 0,
+    "cursor": {
+      "from": {
+        "line": 18,
+        "ch": 0
+      },
+      "to": {
+        "line": 18,
+        "ch": 0
+      }
+    },
+    "expandedKeys": [
+      "item-1-0"
+    ]
+  },
+  "wiki/sources/rindig-interpreted-context-methodology.md": {
+    "scroll": 31.59375,
+    "cursor": {
+      "from": {
+        "line": 21,
+        "ch": 0
+      },
+      "to": {
+        "line": 21,
+        "ch": 0
+      }
+    },
+    "expandedKeys": [
+      "item-1-0"
+    ]
+  }
+}
