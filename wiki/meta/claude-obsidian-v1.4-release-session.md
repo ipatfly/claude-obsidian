@@ -43,9 +43,9 @@ Shipped in response to an internal quality check against the wider ecosystem (16
 
 ### wiki-ingest upgrades
 
-- **URL ingestion**: passes any `https://` URL directly. Uses WebFetch, optionally pipes through defuddle, saves to `.raw/articles/`, then runs the normal ingest pipeline.
-- **Image/vision ingestion**: `.png`, `.jpg`, `.gif`, `.webp`, etc. Claude reads the image natively, extracts text via OCR and concepts via vision, saves the description to `.raw/images/`, then ingests.
-- **Delta tracking**: `.raw/.manifest.json` tracks MD5 hash per source, timestamps, and the pages produced. Re-running ingest on unchanged files skips them automatically. Override with "force ingest".
+- **URL ingestion**: passes any `https://` URL directly. Uses WebFetch, optionally pipes through defuddle, saves to `_raw/articles/`, then runs the normal ingest pipeline.
+- **Image/vision ingestion**: `.png`, `.jpg`, `.gif`, `.webp`, etc. Claude reads the image natively, extracts text via OCR and concepts via vision, saves the description to `_raw/images/`, then ingests.
+- **Delta tracking**: `_raw/.manifest.json` tracks MD5 hash per source, timestamps, and the pages produced. Re-running ingest on unchanged files skips them automatically. Override with "force ingest".
 
 ### wiki-query multi-depth modes
 
@@ -57,7 +57,7 @@ Three query tiers:
 
 ### Hook: PostToolUse auto-commit
 
-Every `Write` or `Edit` tool call to `wiki/` or `.raw/` triggers `git add` and `git commit` automatically. Guarded by `[ -d .git ]` so it never errors in non-git directories, and by `git diff --cached --quiet` so it never creates empty commits. Matcher: `Write|Edit`.
+Every `Write` or `Edit` tool call to `wiki/` or `_raw/` triggers `git add` and `git commit` automatically. Guarded by `[ -d .git ]` so it never errors in non-git directories, and by `git diff --cached --quiet` so it never creates empty commits. Matcher: `Write|Edit`.
 
 ### Critical fix: `allowed-tools` frontmatter removed
 
@@ -249,7 +249,7 @@ Summary of everything new or newly created:
 | `wiki/entities/rvk7895-llm-knowledge-bases.md` | entity | Multi-depth query reference |
 | `wiki/entities/kepano-obsidian-skills.md` | entity | Authoritative skill reference |
 | `wiki/entities/Claudian-YishenTu.md` | entity | Native Obsidian plugin |
-| `.raw/claude-obsidian-ecosystem-research.md` | raw source | Ecosystem research dump |
+| `_raw/claude-obsidian-ecosystem-research.md` | raw source | Ecosystem research dump |
 | `hooks/README.md` | doc | Hook documentation |
 | `AGENTS.md` | bootstrap | Codex CLI / OpenCode |
 | `GEMINI.md` | bootstrap | Gemini CLI / Antigravity |
