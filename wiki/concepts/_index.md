@@ -40,4 +40,10 @@ All concept pages — ideas, patterns, and frameworks extracted from sources.
 
 ---
 
+## Agent Architecture
+
+- [[Interpreted Context Methodology]] — folder structure as agent architecture; five-layer context loading; stage contracts; one agent replacing multi-agent frameworks (developing)
+
+---
+
 ## Add new concepts here as they are extracted from sources.
