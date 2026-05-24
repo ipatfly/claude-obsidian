@@ -51,12 +51,17 @@ Navigation: [[overview]] | [[log]] | [[hot]] | [[dashboard]] | [[Wiki Map]] | [[
 ## Entities
 
 - [[Andrej Karpathy]] — AI researcher, creator of the LLM Wiki pattern, former Tesla AI director (status: developing)
+- [[Jake Van Clief]] — creator of Interpreted Context Methodology (ICM); RinDig GitHub org (status: developing)
 - [[Ar9av-obsidian-wiki]] — multi-agent compatible LLM Wiki plugin; delta tracking manifest (status: current)
 - [[Nexus-claudesidian-mcp]] — native Obsidian plugin + MCP bridge; workspace memory, task management (status: current)
 - [[ballred-obsidian-claude-pkm]] — goal cascade PKM; auto-commit hooks, /adopt command (status: current)
 - [[rvk7895-llm-knowledge-bases]] — 3-depth query system, Marp slides, parallel deep research (status: current)
 - [[kepano-obsidian-skills]] — official skills from Obsidian creator; defuddle, obsidian-bases (status: current)
 - [[Claudian-YishenTu]] — native Obsidian plugin embedding Claude Code; plan mode, @mention (status: current)
+- [[ekadetov-llm-wiki]] — hybrid BM25+vector search; multi-wiki support; URL ingestion (status: current)
+- [[heyitsnoah-claudesidian]] — PARA vault; /init-bootstrap for existing vault adoption; Thinking vs Writing mode (status: current)
+- [[jacksteamdev-obsidian-mcp-tools]] — MCP server; semantic search + Templater execution (status: current)
+- [[YuNaga224-obsidian-memory-mcp]] — Anthropic memory MCP fork; memories as Obsidian graph nodes (status: current)
 - [[Claude SEO]] — Tier 4 Claude Code skill for SEO analysis; 23 skills, 17 agents, 30 scripts at v1.9.0 (status: evergreen)
 
 ---
