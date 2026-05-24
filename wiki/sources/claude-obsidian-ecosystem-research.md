@@ -36,6 +36,10 @@ Comprehensive internet sweep of all Claude + Obsidian projects. Found 16+ active
 - [[rvk7895-llm-knowledge-bases]] — entity page
 - [[kepano-obsidian-skills]] — entity page
 - [[Claudian-YishenTu]] — entity page
+- [[ekadetov-llm-wiki]] — entity page (gap fill, 2026-05-24)
+- [[heyitsnoah-claudesidian]] — entity page (gap fill, 2026-05-24)
+- [[jacksteamdev-obsidian-mcp-tools]] — entity page (gap fill, 2026-05-24)
+- [[YuNaga224-obsidian-memory-mcp]] — entity page (gap fill, 2026-05-24)
 
 ## Key Findings
 
