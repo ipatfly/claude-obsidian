@@ -37,12 +37,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "wiki/sources/rindig-interpreted-context-methodology.md",
+                "file": "_raw/Interpreted-Context-Methdology.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "rindig-interpreted-context-methodology"
+              "title": "Interpreted-Context-Methdology"
             }
           }
         ],
@@ -218,6 +218,7 @@
   },
   "active": "daa117e496c99f07",
   "lastOpenFiles": [
+    "wiki/sources/rindig-interpreted-context-methodology.md",
     "wiki/concepts/Interpreted Context Methodology.md",
     "wiki/entities/Jake Van Clief.md",
     "wiki/index.md",
@@ -228,8 +229,7 @@
     "wiki/entities/jacksteamdev-obsidian-mcp-tools.md",
     "wiki/entities/heyitsnoah-claudesidian.md",
     "wiki/entities/ekadetov-llm-wiki.md",
-    "wiki/sources/rindig-interpreted-context-methodology.md",
-    "_raw/RinDig Interpreted-Context-Methdology.md",
+    "_raw/Interpreted-Context-Methdology.md",
     "README.md",
     "_raw/claude-obsidian-ecosystem-research.md",
     "_raw",

@@ -1,6 +1,6 @@
 ---
 type: source
-title: "Interpreted Context Methodology"
+title: Interpreted Context Methodology
 address: c-000003
 created: 2026-05-24
 updated: 2026-05-24
@@ -15,8 +15,8 @@ related:
   - "[[Jake Van Clief]]"
   - "[[LLM Wiki Pattern]]"
   - "[[DragonScale Memory]]"
-raw_file: "_raw/RinDig Interpreted-Context-Methdology.md"
-source_url: "https://github.com/RinDig/Interpreted-Context-Methdology"
+raw_file: "[[Interpreted-Context-Methdology]]"
+source_url: https://github.com/RinDig/Interpreted-Context-Methdology
 stars: 520
 ---
 

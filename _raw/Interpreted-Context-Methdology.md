@@ -22,7 +22,9 @@ ICM replaces framework-level orchestration with filesystem structure. Numbered f
 
 ---
 
-## Why This ExistsThere are genuinely good agentic frameworks available today. CrewAI, LangChain, AutoGen, and others handle multi-step orchestration, memory management, tool use, and error recovery. They work. But they work within their own structures, and adjusting those structures requires development work. Changing the order of steps, swapping a prompt, adding or removing a stage: these actions typically mean editing code, understanding abstractions, and redeploying.
+## Why This Exists
+
+There are genuinely good agentic frameworks available today. CrewAI, LangChain, AutoGen, and others handle multi-step orchestration, memory management, tool use, and error recovery. They work. But they work within their own structures, and adjusting those structures requires development work. Changing the order of steps, swapping a prompt, adding or removing a stage: these actions typically mean editing code, understanding abstractions, and redeploying.
 
 For practitioners whose workflows are sequential and need human review at each step, the control surface can be much simpler.
 
@@ -30,7 +32,9 @@ ICM is built on an observation that is almost too simple to write down: if the p
 
 This is going backward before going forward. The principles that made Unix pipelines effective in the 1970s -- programs that do one thing, output of one becomes input of another, plain text as universal interface -- apply directly to AI agent orchestration today.
 
-## Design PrinciplesFive ideas, each borrowed from established practice.
+## Design Principles
+
+Five ideas, each borrowed from established practice.
 
 **One stage, one job.** Each stage handles a single step. A stage that researches does not also write. A stage that writes does not also build. This follows the Unix principle and Parnas's information-hiding criterion.
 
@@ -42,7 +46,9 @@ This is going backward before going forward. The principles that made Unix pipel
 
 **Configure the factory, not the product.** A workspace is set up once with the user's preferences, brand, style, and structural decisions. After that, each run of the pipeline produces a new deliverable using the same configuration.
 
-## How It WorksAgents read down five layers and stop when they have what they need.
+## How It Works
+
+Agents read down five layers and stop when they have what they need.
 
 ```
 Layer 0: CLAUDE.md           "Where am I?"            Always loaded (~800 tokens)
@@ -91,45 +97,54 @@ Layer 2 is the control point. Each stage contract includes an Inputs table that 
 
 The filesystem is doing the work that a framework would otherwise do in code. Stage sequencing is the folder numbering. Context scoping is the folder hierarchy. State management is the files on disk. Coordination between stages is one folder's output being another folder's input.
 
-## Stage ContractsEach stage defines a contract in its CONTEXT.md with three parts: what it reads, what it does, and what it writes.
+### Stage Contracts
 
-\## Inputs
-| Source | File/Location | Section/Scope | Why |
-|\--------|\--------------|\---------------|\-----|
-| Previous stage | ../01-research/output/ | Full file | Source material |
-| Style guide | ../../brand-vault/voice-rules.md | Voice Rules section | Tone guidance |
+Each stage defines a contract in its CONTEXT.md with three parts: what it reads, what it does, and what it writes.
 
-\## Process
+### Inputs
+| Source         | File/Location                    | Section/Scope       | Why             |
+| -------------- | -------------------------------- | ------------------- | --------------- |
+| Previous stage | ../01-research/output/           | Full file           | Source material |
+| Style guide    | ../../brand-vault/voice-rules.md | Voice Rules section | Tone guidance   |
+
+### Process
+
 1. Read the research output
 2. Identify the narrative angle
 3. Write the script following voice-rules
 4. Run audit checks
 5. Save to output/
 
-\## Outputs
-| Artifact | Location | Format |
-|\----------|\----------|\--------|
-| Script | output/\[slug\]\-script.md | Markdown with metadata header |
+### Outputs
+| Artifact | Location                   | Format                        |
+| -------- | -------------------------- | ----------------------------- |
+| Script   | output/\[slug\]\-script.md | Markdown with metadata header |
 
 Creative stages also include **checkpoints** (where the agent pauses for human steering) and **audits** (quality checklists the agent runs before writing output). Not every stage needs these. Linear stages like extraction or rendering often run straight through. But any stage where the model is making creative decisions benefits from at least one checkpoint and a quality gate.
 
-## ObservabilityThe most useful property of this approach may be one that was not designed as a feature. Because every intermediate output is a plain file, the system is observable by default. There is no logging layer to build, no dashboard to configure, no special tooling to inspect pipeline state. You open a folder and read the files.
+### Observability
+The most useful property of this approach may be one that was not designed as a feature. Because every intermediate output is a plain file, the system is observable by default. There is no logging layer to build, no dashboard to configure, no special tooling to inspect pipeline state. You open a folder and read the files.
 
 This is a glass-box AI workflow. It did not become transparent through the addition of an explanation layer. It was never opaque in the first place, because every artifact is a plain-text file that a human can read.
 
 If stage 3 produces bad output, you know exactly where to look. You can read the stage's CONTEXT.md to see what instructions it received. You can read the input files to see what it was working with. You can edit the output and re-run the next stage. The entire system state is visible at all times because the system state is the filesystem.
 
-## PortabilityA workspace is a folder. It can be copied to another machine, committed to Git, emailed as a zip file, or synced through any cloud storage service. It carries its own prompts, its own context structure, its own stage definitions. There is no server to configure, no environment to replicate, no deployment step.
+### Portability
+A workspace is a folder. It can be copied to another machine, committed to Git, emailed as a zip file, or synced through any cloud storage service. It carries its own prompts, its own context structure, its own stage definitions. There is no server to configure, no environment to replicate, no deployment step.
 
 Every change to a prompt, every edit to a stage output, every configuration adjustment is diffable and reversible through standard version control. Stage outputs can be committed after each run, creating a version history of the entire pipeline's behavior over time.
 
 If you build a workspace for a client's weekly reporting workflow, handing it over means copying a folder. The client can run it, edit the prompts to match their evolving needs, and adjust stages without involving a developer.
 
-## Where This WorksICM handles sequential multi-step workflows where a human reviews output at each stage. Content production pipelines. Research and analysis workflows. Monitoring and digest systems. Reporting processes. Training material development.
+## Where This Works
+
+ICM handles sequential multi-step workflows where a human reviews output at each stage. Content production pipelines. Research and analysis workflows. Monitoring and digest systems. Reporting processes. Training material development.
 
 The common thread: these workflows are sequential (step 2 follows step 1), reviewable (a human should check each step's output), and repeatable (the same pipeline runs regularly with different input).
 
-## Where This Does Not WorkICM is not a replacement for multi-agent frameworks in every context.
+## Where This Does Not Work
+
+ICM is not a replacement for multi-agent frameworks in every context.
 
 **Real-time multi-agent collaboration** -- where agents need to communicate dynamically in tight loops -- requires message-passing infrastructure that frameworks like AutoGen provide. File-based handoffs are too slow for this.
 
@@ -139,11 +154,15 @@ The common thread: these workflows are sequential (step 2 follows step 1), revie
 
 The claim is not that ICM replaces existing tools across the board. The claim is that for a large and common class of workflows, the existing tools provide more complexity than the problem requires, and that complexity has real costs.
 
-## A Note on MCPIt is worth distinguishing ICM from Anthropic's Model Context Protocol (MCP). MCP standardizes how models access external tools and data sources -- the integration problem between AI systems and the services they need to call. ICM addresses a different layer: how to structure and deliver context to an agent across a multi-stage workflow. The two are complementary. An ICM stage might use MCP connections to access external services, while the stage's folder structure determines what context the agent receives when doing so.
+## A Note on MCP
+
+It is worth distinguishing ICM from Anthropic's Model Context Protocol (MCP). MCP standardizes how models access external tools and data sources -- the integration problem between AI systems and the services they need to call. ICM addresses a different layer: how to structure and deliver context to an agent across a multi-stage workflow. The two are complementary. An ICM stage might use MCP connections to access external services, while the stage's folder structure determines what context the agent receives when doing so.
 
 ---
 
-## Getting Started1. Clone this repo
+## Getting Started
+
+1. Clone this repo
 2. `cd workspaces/script-to-animation` (or any workspace)
 3. Open [Claude Code](https://docs.anthropic.com/en/docs/claude-code)
 4. Type `setup`
@@ -153,13 +172,16 @@ The claim is not that ICM replaces existing tools across the board. The claim is
 
 Each stage produces an output file. You can edit that file before moving on. The next stage reads whatever you left there.
 
-## Available Workspaces| Workspace | What it does | Stages |
+## Available Workspaces
+| Workspace | What it does | Stages |
 | --- | --- | --- |
 | [script-to-animation](/RinDig/Interpreted-Context-Methdology/blob/main/workspaces/script-to-animation) | Content idea through script writing, animation spec, and Remotion code | 3 |
 | [course-deck-production](/RinDig/Interpreted-Context-Methdology/blob/main/workspaces/course-deck-production) | Unstructured material (PDFs, papers, notes) into polished PowerPoint slide decks | 5 |
 | [workspace-builder](/RinDig/Interpreted-Context-Methdology/blob/main/workspaces/workspace-builder) | Build a new ICM workspace for any domain | 5 |
 
-## Build Your Own WorkspaceThe workspace-builder is a workspace whose output is a new workspace. It follows ICM conventions to produce workspaces that follow ICM conventions.
+## Build Your Own Workspace
+
+The workspace-builder is a workspace whose output is a new workspace. It follows ICM conventions to produce workspaces that follow ICM conventions.
 
 1. `cd workspaces/workspace-builder`
 2. Type `setup` to describe your domain
@@ -168,26 +190,36 @@ Each stage produces an output file. You can edit that file before moving on. The
 
 The pattern transfers to any repeatable multi-step workflow: report generation, audit procedures, curriculum development, code documentation, or any process where someone currently does the same sequence of steps with different input material each time.
 
-## The ConventionsEvery workspace follows 15 patterns defined in [`_core/CONVENTIONS.md`](/RinDig/Interpreted-Context-Methdology/blob/main/_core/CONVENTIONS.md). These are old ideas -- separation of concerns, one-way dependencies, canonical sources, pipe-and-filter architecture -- applied to the specific problem of structuring context for AI agents.
+## The Conventions
+Every workspace follows 15 patterns defined in [`_core/CONVENTIONS.md`](/RinDig/Interpreted-Context-Methdology/blob/main/_core/CONVENTIONS.md). These are old ideas -- separation of concerns, one-way dependencies, canonical sources, pipe-and-filter architecture -- applied to the specific problem of structuring context for AI agents.
 
-### Architecture- **Stage contracts** -- Every stage CONTEXT.md has Inputs, Process, and Outputs. Simple enough for anyone to read. Structured enough for an agent to follow.
+### Architecture
+
+- **Stage contracts** -- Every stage CONTEXT.md has Inputs, Process, and Outputs. Simple enough for anyone to read. Structured enough for an agent to follow.
 - **Stage handoffs** -- Output folders connect stages. Edit any output and the next stage picks up your changes.
 - **One-way references** -- If A references B, B does not reference A. Prevents circular dependencies and scales linearly.
 - **Selective section routing** -- CONTEXT.md tables specify which sections of which files to load. Not the whole file. The section you need.
 - **Canonical sources** -- Every piece of information has one home. Other files point there. The moment the same rule exists in two files, they drift.
 
-### Quality- **Specs are contracts** -- Specification stages define WHAT and WHEN. They do not prescribe HOW. The build stage has creative freedom within the quality floor defined by the design system.
+### Quality
+
+- **Specs are contracts** -- Specification stages define WHAT and WHEN. They do not prescribe HOW. The build stage has creative freedom within the quality floor defined by the design system.
 - **Checkpoints** -- Creative stages pause for human steering between steps. The agent completes a unit of work, presents options, and the human redirects before the next unit begins.
 - **Stage audits** -- Quality checklists the agent runs after completing a stage but before writing output. Each check has an unambiguous pass condition.
 - **Value validation** -- Content stages define what types of value their output delivers. The value is locked before drafting begins.
 - **Docs over outputs** -- Reference docs are the authoritative source for how to build. Agents do not read previous outputs to learn patterns. Early outputs are the worst outputs. If future agents learn from them, quality never improves.
 
-### Onboarding- **Questionnaire design** -- Flat, all-at-once, system-level only. Configure the factory, not the product. Voice questions extract concrete examples, not descriptions.
+### Onboarding
+
+- **Questionnaire design** -- Flat, all-at-once, system-level only. Configure the factory, not the product. Voice questions extract concrete examples, not descriptions.
 - **Shared constants** -- Code-producing workspaces define shared constant files that all outputs import from. Change a value once, it updates everywhere.
 
-## Contributing**New workspaces are the main contribution.** If you have a repeatable workflow that benefits from staged human-in-the-loop AI automation, it probably belongs here.
+## Contributing
 
-### How to contribute a workspace1. Fork the repo
+**New workspaces are the main contribution.** If you have a repeatable workflow that benefits from staged human-in-the-loop AI automation, it probably belongs here.
+
+### How to contribute a workspace
+1. Fork the repo
 2. Use the workspace-builder to create your workspace:
 	```
 	cd workspaces/workspace-builder
@@ -197,12 +229,16 @@ The pattern transfers to any repeatable multi-step workflow: report generation, 
 4. Test it: run `setup` in your new workspace, then run through the pipeline at least once
 5. Open a PR
 
-### What makes a good workspace- **Repeatable workflow.** Something you or others will run many times, not a one-off task.
+### What makes a good workspace
+
+- **Repeatable workflow.** Something you or others will run many times, not a one-off task.
 - **Clear stage boundaries.** Each stage produces a distinct artifact that a human might want to review or edit before proceeding.
 - **System-level setup.** The questionnaire configures the production system (identity, design, preferences), not a specific run.
 - **Follows ICM conventions.** The workspace-builder enforces this automatically. See [`_core/CONVENTIONS.md`](/RinDig/Interpreted-Context-Methdology/blob/main/_core/CONVENTIONS.md) for the full spec.
 
-### PR checklist- [ ] Workspace was built using the workspace-builder (not hand-assembled)
+### PR checklist
+
+- [ ] Workspace was built using the workspace-builder (not hand-assembled)
 - [ ] `setup` runs cleanly and all placeholders resolve
 - [ ] At least one end-to-end run completed successfully
 - [ ] No stage outputs committed (output folders should only contain `.gitkeep`)
@@ -211,13 +247,17 @@ The pattern transfers to any repeatable multi-step workflow: report generation, 
 - [ ] Creative stages have at least one checkpoint and an audit section
 - [ ] No circular dependencies between stages
 
-### Other contributions- **Bug fixes** to existing workspaces or conventions
+### Other contributions
+
+- **Bug fixes** to existing workspaces or conventions
 - **Improvements** to the workspace-builder itself
 - **New patterns** for `_core/CONVENTIONS.md` (propose in an issue first)
 
-## OriginICM grew out of a [content production system](https://github.com/RinDig/Content-Agent-Routing-Promptbase) that applies separation of concerns to AI context windows instead of code modules. That system runs a full content operation: scripting, animation specs, Remotion builds, brand management. ICM is the general-purpose version -- the structural patterns extracted so anyone can scaffold their own workflows.
+## Origin
+
+ICM grew out of a [content production system](https://github.com/RinDig/Content-Agent-Routing-Promptbase) that applies separation of concerns to AI context windows instead of code modules. That system runs a full content operation: scripting, animation specs, Remotion builds, brand management. ICM is the general-purpose version -- the structural patterns extracted so anyone can scaffold their own workflows.
 
 For the academic treatment, see [Model Workspace Protocol: Folder Structure as Agent Architecture](/RinDig/Interpreted-Context-Methdology/blob/main/link-to-paper) (Van Clief, 2026).
 
-## LicenseMIT License. See [LICENSE](/RinDig/Interpreted-Context-Methdology/blob/main/LICENSE) for details.
+- LicenseMIT License. See [LICENSE](/RinDig/Interpreted-Context-Methdology/blob/main/LICENSE) for details.
 
