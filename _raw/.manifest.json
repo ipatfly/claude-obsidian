@@ -2,8 +2,47 @@
   "version": 1,
   "created": "2026-04-23",
   "description": "Ingest delta tracker and address map for the claude-obsidian vault. Do not hand-edit; wiki-ingest maintains this.",
-  "sources": {},
+  "sources": {
+    "_raw/claude-obsidian-ecosystem-research.md": {
+      "hash": "1a5e5c95cbc5bb693119a0334ee066ec",
+      "ingested_at": "2026-04-08",
+      "gap_filled_at": "2026-05-24",
+      "pages_created": [
+        "wiki/sources/claude-obsidian-ecosystem-research.md",
+        "wiki/comparisons/claude-obsidian-ecosystem.md",
+        "wiki/concepts/cherry-picks.md",
+        "wiki/entities/Ar9av-obsidian-wiki.md",
+        "wiki/entities/Nexus-claudesidian-mcp.md",
+        "wiki/entities/ballred-obsidian-claude-pkm.md",
+        "wiki/entities/rvk7895-llm-knowledge-bases.md",
+        "wiki/entities/kepano-obsidian-skills.md",
+        "wiki/entities/Claudian-YishenTu.md",
+        "wiki/entities/ekadetov-llm-wiki.md",
+        "wiki/entities/heyitsnoah-claudesidian.md",
+        "wiki/entities/jacksteamdev-obsidian-mcp-tools.md",
+        "wiki/entities/YuNaga224-obsidian-memory-mcp.md"
+      ],
+      "pages_updated": ["wiki/index.md", "wiki/log.md", "wiki/hot.md"]
+    },
+    "_raw/RinDig Interpreted-Context-Methdology.md": {
+      "hash": "a01e53fc2446d01437005a07319b8e2f",
+      "ingested_at": "2026-05-24",
+      "pages_created": [
+        "wiki/sources/rindig-interpreted-context-methodology.md",
+        "wiki/concepts/Interpreted Context Methodology.md",
+        "wiki/entities/Jake Van Clief.md"
+      ],
+      "pages_updated": ["wiki/index.md", "wiki/log.md", "wiki/hot.md", "wiki/entities/_index.md", "wiki/concepts/_index.md"]
+    }
+  },
   "address_map": {
-    "wiki/concepts/DragonScale Memory.md": "c-000001"
+    "wiki/concepts/DragonScale Memory.md": "c-000001",
+    "wiki/sources/rindig-interpreted-context-methodology.md": "c-000003",
+    "wiki/entities/Jake Van Clief.md": "c-000004",
+    "wiki/concepts/Interpreted Context Methodology.md": "c-000005",
+    "wiki/entities/ekadetov-llm-wiki.md": "c-000006",
+    "wiki/entities/heyitsnoah-claudesidian.md": "c-000007",
+    "wiki/entities/jacksteamdev-obsidian-mcp-tools.md": "c-000008",
+    "wiki/entities/YuNaga224-obsidian-memory-mcp.md": "c-000009"
   }
 }
