@@ -68,7 +68,8 @@ Navigation: [[overview]] | [[log]] | [[hot]] | [[dashboard]] | [[Wiki Map]] | [[
 
 ## Sources
 
-- [[claude-obsidian-ecosystem-research]] — 2026-04-08 | web research across 16+ repos | 8 wiki pages created
+- [[claude-obsidian-ecosystem-research]] — 2026-04-08 | web research across 16+ repos | 12 wiki pages total (4 entity gaps filled 2026-05-24)
+- [[rindig-interpreted-context-methodology]] — 2026-05-24 | ICM GitHub README | 3 wiki pages created
 
 ---
 
