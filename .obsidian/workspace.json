@@ -11,13 +11,28 @@
             "id": "a31de1b302cdc5cf",
             "type": "leaf",
             "state": {
-              "type": "graph",
+              "type": "markdown",
+              "state": {
+                "file": "WIKI.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "WIKI"
+            }
+          },
+          {
+            "id": "9bbd998f5ed5a708",
+            "type": "leaf",
+            "state": {
+              "type": "smart-release-notes-view",
               "state": {},
-              "icon": "lucide-git-fork",
-              "title": "Graph view"
+              "icon": "file-text",
+              "title": "Release Notes"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -69,12 +84,23 @@
               "icon": "lucide-bookmark",
               "title": "Bookmarks"
             }
+          },
+          {
+            "id": "855d02526a377510",
+            "type": "leaf",
+            "state": {
+              "type": "notebook-navigator",
+              "state": {},
+              "icon": "notebook-navigator",
+              "title": "Notebook Navigator"
+            }
           }
-        ]
+        ],
+        "currentTab": 3
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 552.5
   },
   "right": {
     "id": "7092b65be1e76349",
@@ -90,6 +116,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "WIKI.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -99,7 +126,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks"
+              "title": "Backlinks for WIKI"
             }
           },
           {
@@ -167,13 +194,33 @@
               "icon": "lucide-ghost",
               "title": "calendar"
             }
+          },
+          {
+            "id": "4c29bb8b9e5846a6",
+            "type": "leaf",
+            "state": {
+              "type": "smart-connections-view",
+              "state": {},
+              "icon": "smart-connections",
+              "title": "Connections"
+            }
+          },
+          {
+            "id": "1ba70e4563c4891a",
+            "type": "leaf",
+            "state": {
+              "type": "quiet-outline",
+              "state": {},
+              "icon": "lines-of-text",
+              "title": "Quiet Outline"
+            }
           }
-        ]
+        ],
+        "currentTab": 7
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -183,9 +230,34 @@
       "daily-notes:Open today's daily note": false,
       "templates:Insert template": false,
       "command-palette:Open command palette": false,
-      "bases:Create new base": false
+      "bases:Create new base": false,
+      "obsidian-excalidraw-plugin:New drawing": false,
+      "templater-obsidian:Templater": false,
+      "obsidian-git:Open Git source control": false,
+      "smart-connections:Smart Connections: Open connections view": false,
+      "smart-connections:Toggle Footer Connections": false,
+      "smart-connections:Smart Connections: Open random connection": false,
+      "smart-connections:Smart Lookup: Open lookup view": false,
+      "notebook-navigator:Notebook Navigator": false
     }
   },
-  "active": "a31de1b302cdc5cf",
-  "lastOpenFiles": []
+  "active": "855d02526a377510",
+  "lastOpenFiles": [
+    "GEMINI.md",
+    "wiki/Wiki Map.canvas",
+    "wiki/entities/Jake Van Clief.md",
+    "wiki/index.md",
+    "wiki/entities/YuNaga224-obsidian-memory-mcp.md",
+    "wiki/entities/jacksteamdev-obsidian-mcp-tools.md",
+    "wiki/entities/heyitsnoah-claudesidian.md",
+    "wiki/entities/ekadetov-llm-wiki.md",
+    "wiki/concepts/Interpreted Context Methodology.md",
+    "wiki/sources/rindig-interpreted-context-methodology.md",
+    "WIKI.md",
+    "_raw/RinDig Interpreted-Context-Methdology.md",
+    "README.md",
+    "_raw/claude-obsidian-ecosystem-research.md",
+    "_raw",
+    "skills-lock.json"
+  ]
 }

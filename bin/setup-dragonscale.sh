@@ -57,10 +57,10 @@ else
   echo "--  .vault-meta/tiling-thresholds.json already present (not overwritten)"
 fi
 
-# ── 3. Provision .raw/.manifest.json (if absent) ──────────────────────────────
+# ── 3. Provision _raw/.manifest.json (if absent) ──────────────────────────────
 mkdir -p .raw
-if [ ! -f .raw/.manifest.json ]; then
-  cat > .raw/.manifest.json <<'JSON'
+if [ ! -f _raw/.manifest.json ]; then
+  cat > _raw/.manifest.json <<'JSON'
 {
   "version": 1,
   "created": "DRAGONSCALE_SETUP",
@@ -71,11 +71,11 @@ if [ ! -f .raw/.manifest.json ]; then
 JSON
   # Replace placeholder with today's date
   DATE=$(date +%Y-%m-%d)
-  sed -i.bak "s/DRAGONSCALE_SETUP/$DATE/" .raw/.manifest.json
-  rm -f .raw/.manifest.json.bak
-  echo "OK  .raw/.manifest.json initialized (empty sources + address_map)"
+  sed -i.bak "s/DRAGONSCALE_SETUP/$DATE/" _raw/.manifest.json
+  rm -f _raw/.manifest.json.bak
+  echo "OK  _raw/.manifest.json initialized (empty sources + address_map)"
 else
-  echo "--  .raw/.manifest.json already present (not overwritten)"
+  echo "--  _raw/.manifest.json already present (not overwritten)"
 fi
 
 # ── 4. Rollout-baseline marker in legacy-pages.txt ────────────────────────────

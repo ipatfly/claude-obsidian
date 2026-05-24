@@ -253,7 +253,7 @@ Enable in **Settings → Community Plugins → enable**:
 | **Obsidian Git** | Auto-commits vault every 15 minutes |
 | **Dataview** *(optional/legacy)* | Only needed for the legacy `wiki/meta/dashboard.md` queries. The primary dashboard now uses Bases. |
 
-Also install the **[Obsidian Web Clipper](https://obsidian.md/clipper)** browser extension. Sends web pages to `.raw/` in one click.
+Also install the **[Obsidian Web Clipper](https://obsidian.md/clipper)** browser extension. Sends web pages to `_raw/` in one click.
 
 ---
 
@@ -322,7 +322,7 @@ claude-obsidian/
 │   └── meta/
 │       ├── dashboard.base       # Bases dashboard (primary)
 │       └── dashboard.md         # Legacy Dataview dashboard (optional)
-├── .raw/                        # source documents (hidden in Obsidian)
+├── _raw/                        # source documents (hidden in Obsidian)
 ├── .obsidian/snippets/          # vault-colors.css (3-color scheme)
 ├── WIKI.md                      # full schema reference
 ├── CLAUDE.md                    # project instructions

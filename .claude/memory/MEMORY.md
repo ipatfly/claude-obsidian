@@ -1,0 +1,1 @@
+- [Project Context](project_context.md) — claude-obsidian Plugin-Workspace, Fork von AgriciDaniel, persönlicher Wiki-Aufbau

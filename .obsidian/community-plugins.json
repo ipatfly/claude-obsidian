@@ -2,5 +2,15 @@
   "obsidian-excalidraw-plugin",
   "obsidian-banners",
   "calendar",
-  "thino"
+  "thino",
+  "obsidian-local-rest-api",
+  "templater-obsidian",
+  "dataview",
+  "obsidian-git",
+  "obsidian-style-settings",
+  "obsidian-minimal-settings",
+  "smart-connections",
+  "notebook-navigator",
+  "obsidian-quiet-outline",
+  "quickadd"
 ]

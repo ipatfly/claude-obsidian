@@ -13,7 +13,7 @@ This vault demonstrates the LLM Wiki pattern — a persistent, compounding knowl
 ## Vault Structure
 
 ```
-.raw/           source documents — immutable, Claude reads but never modifies
+_raw/           source documents — immutable, Claude reads but never modifies
 wiki/           Claude-generated knowledge base
 _templates/     Obsidian Templater templates
 _attachments/   images and PDFs referenced by wiki pages
@@ -21,7 +21,7 @@ _attachments/   images and PDFs referenced by wiki pages
 
 ## How to Use
 
-Drop a source file into `.raw/`, then tell Claude: "ingest [filename]".
+Drop a source file into `_raw/`, then tell Claude: "ingest [filename]".
 
 Ask any question. Claude reads the index first, then drills into relevant pages.
 
@@ -62,3 +62,15 @@ Do NOT read the wiki for general coding questions or things already in this proj
 
 If you configured the MCP server, Claude can read and write vault notes directly.
 See `skills/wiki/references/mcp-setup.md` for setup instructions.
+
+## Personal Setup (ipatfly)
+
+This is a personal fork. Origin: `https://github.com/ipatfly/claude-obsidian`
+Upstream: `https://github.com/AgriciDaniel/claude-obsidian`
+
+Wiki demo content kept as reference.
+
+## Memory
+
+Project memory lives at `.claude/memory/`. Read `.claude/memory/MEMORY.md` at session start
+for project context.
