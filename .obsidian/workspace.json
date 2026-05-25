@@ -218,6 +218,9 @@
   },
   "active": "daa117e496c99f07",
   "lastOpenFiles": [
+    "resources/agents/wiki-lint.md",
+    "resources/agents/wiki-ingest.md",
+    "resources/agents",
     "resources/hooks/hooks.json",
     "resources/hooks/README.md",
     "resources/hooks",
@@ -248,12 +251,9 @@
     "resources/skills/save/SKILL.md",
     "resources/skills/obsidian-markdown/SKILL.md",
     "resources/skills/obsidian-bases/SKILL.md",
-    "resources/skills/defuddle/SKILL.md",
     "resources/skills/canvas/references",
     "resources/skills/wiki-query",
     "resources/skills/wiki-lint",
-    "resources/skills/wiki-ingest",
-    "resources/skills/wiki-fold",
     "wiki/Wiki Map.canvas"
   ]
 }
