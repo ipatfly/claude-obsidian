@@ -176,7 +176,7 @@ Add one node per domain page. Connect domains that have significant cross-refere
 **Opt-in feature.** Address Validation runs only if the vault is using DragonScale, detected by:
 
 ```bash
-if [ -x ./scripts/allocate-address.sh ] && [ -f ./.vault-meta/address-counter.txt ]; then
+if [ -x ./_system/scripts/allocate-address.sh ] && [ -f ./.vault-meta/address-counter.txt ]; then
   DRAGONSCALE_ADDRESSES=1
 else
   DRAGONSCALE_ADDRESSES=0
@@ -210,7 +210,7 @@ Before validating anything, classify the page:
 
 2. **Uniqueness check**: no two pages share the same address value. Report both paths.
 
-3. **Counter consistency**: `./scripts/allocate-address.sh --peek` returns the next counter value. Every observed `c-NNNNNN` must satisfy `NNNNNN < peek_value`. Violation = counter drift.
+3. **Counter consistency**: `./_system/scripts/allocate-address.sh --peek` returns the next counter value. Every observed `c-NNNNNN` must satisfy `NNNNNN < peek_value`. Violation = counter drift.
 
 4. **Post-rollout enforcement**: every page classified as "post-rollout (must have address)" that LACKS the `address:` field is a lint **error**, not informational. This prevents the silent-regression path where a new page skips address assignment.
 
@@ -235,7 +235,7 @@ Lint only observes. Do NOT auto-assign missing addresses during lint. Assignment
 ```markdown
 ## Address Validation
 
-- Counter state: `$(./scripts/allocate-address.sh --peek)`
+- Counter state: `$(./_system/scripts/allocate-address.sh --peek)`
 - Highest c- address observed: c-XXXXXX
 - Post-rollout pages checked: N (X passing, Y errors)
 - Legacy pages pending backfill: M
@@ -243,8 +243,8 @@ Lint only observes. Do NOT auto-assign missing addresses during lint. Assignment
 ### Errors
 - [[Page Name]]: invalid address format `{value}`. Expected `c-NNNNNN` or `l-NNNNNN`.
 - [[Page A]] and [[Page B]] share address `c-000042`.
-- [[Post-Rollout Page]]: missing address. Page created 2026-04-25 (post-rollout); address required. Run wiki-ingest or manually run `./scripts/allocate-address.sh` and add to frontmatter.
-- [[Page Name]] has address `c-000100` but counter peek is `50`. Counter drift; run `./scripts/allocate-address.sh --rebuild`.
+- [[Post-Rollout Page]]: missing address. Page created 2026-04-25 (post-rollout); address required. Run wiki-ingest or manually run `./_system/scripts/allocate-address.sh` and add to frontmatter.
+- [[Page Name]] has address `c-000100` but counter peek is `50`. Counter drift; run `./_system/scripts/allocate-address.sh --rebuild`.
 - `_raw/.manifest.json` maps `wiki/foo.md` -> `c-000010` but page frontmatter has `c-000012`. Resolve mismatch.
 
 ### Pending backfill (informational)
@@ -260,8 +260,8 @@ Lint only observes. Do NOT auto-assign missing addresses during lint. Assignment
 ### Detection and delegation
 
 ```bash
-if [ -x ./scripts/tiling-check.py ] && command -v python3 >/dev/null 2>&1; then
-  ./scripts/tiling-check.py --peek > /tmp/tiling-peek.json 2>/dev/null
+if [ -x ./_system/scripts/tiling-check.py ] && command -v python3 >/dev/null 2>&1; then
+  ./_system/scripts/tiling-check.py --peek > /tmp/tiling-peek.json 2>/dev/null
   PEEK_EXIT=$?
   case $PEEK_EXIT in
     0)  TILING_READY=1 ;;                                  # ready
@@ -274,7 +274,7 @@ if [ -x ./scripts/tiling-check.py ] && command -v python3 >/dev/null 2>&1; then
   esac
 else
   TILING_READY=0
-  echo "tiling skipped: scripts/tiling-check.py or python3 not available"
+  echo "tiling skipped: _system/scripts/tiling-check.py or python3 not available"
 fi
 ```
 
@@ -283,7 +283,7 @@ Inspect `/tmp/tiling-peek.json` (structured diagnostics: script path, python int
 When `TILING_READY=1`:
 
 ```bash
-./scripts/tiling-check.py --report wiki/meta/tiling-report-YYYY-MM-DD.md
+./_system/scripts/tiling-check.py --report wiki/meta/tiling-report-YYYY-MM-DD.md
 REPORT_EXIT=$?
 case $REPORT_EXIT in
   0)  echo "tiling report written" ;;

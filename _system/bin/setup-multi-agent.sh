@@ -18,7 +18,7 @@
 set -euo pipefail
 
 REPO_ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
-SKILLS_DIR="$REPO_ROOT/skills"
+SKILLS_DIR="$REPO_ROOT/.claude/skills"
 
 if [ ! -d "$SKILLS_DIR" ]; then
   echo "ERROR: $SKILLS_DIR does not exist. Are you running this from the claude-obsidian repo?"

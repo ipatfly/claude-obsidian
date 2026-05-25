@@ -10,7 +10,7 @@
 # external prerequisites.
 #
 # Usage:
-#   bash bin/setup-dragonscale.sh [optional: /path/to/vault]
+#   bash _system/bin/setup-dragonscale.sh [optional: /path/to/vault]
 
 set -euo pipefail
 
@@ -21,13 +21,13 @@ echo "Setting up DragonScale Memory at: $VAULT"
 cd "$VAULT"
 
 # ── 1. Verify required artifacts that ship with the plugin ───────────────────
-for required in "scripts/allocate-address.sh" "scripts/tiling-check.py" "skills/wiki-fold/SKILL.md"; do
+for required in "_system/scripts/allocate-address.sh" "_system/scripts/tiling-check.py" "resources/skills/wiki-fold/SKILL.md"; do
   if [ ! -e "$required" ]; then
     echo "ERR: missing $required. Reinstall the claude-obsidian plugin." >&2
     exit 1
   fi
 done
-chmod +x scripts/allocate-address.sh scripts/tiling-check.py
+chmod +x _system/scripts/allocate-address.sh _system/scripts/tiling-check.py
 
 # ── 2. Provision .vault-meta/ ─────────────────────────────────────────────────
 mkdir -p .vault-meta
@@ -49,7 +49,7 @@ if [ ! -f .vault-meta/tiling-thresholds.json ]; then
   },
   "calibrated": false,
   "calibration_pairs_labeled": 0,
-  "notes": "Conservative seed thresholds, NOT calibrated against this vault. See skills/wiki-lint/SKILL.md Semantic Tiling section for the calibration procedure."
+  "notes": "Conservative seed thresholds, NOT calibrated against this vault. See resources/skills/wiki-lint/SKILL.md Semantic Tiling section for the calibration procedure."
 }
 JSON
   echo "OK  .vault-meta/tiling-thresholds.json initialized with conservative seed bands"
@@ -99,7 +99,7 @@ fi
 # ── 5. Sanity checks ──────────────────────────────────────────────────────────
 echo ""
 echo "Sanity checks:"
-NEXT=$(./scripts/allocate-address.sh --peek 2>&1 | tail -1)
+NEXT=$(./_system/scripts/allocate-address.sh --peek 2>&1 | tail -1)
 echo "  next address: c-$(printf '%06d' $NEXT)"
 
 PYTHON=$(command -v python3 || echo "not installed")
@@ -123,5 +123,5 @@ fi
 echo ""
 echo "DragonScale setup complete."
 echo "See wiki/concepts/DragonScale Memory.md for the full spec."
-echo "See skills/wiki-fold/ for Mechanism 1 (log folds)."
+echo "See resources/skills/wiki-fold/ for Mechanism 1 (log folds)."
 echo "wiki-ingest and wiki-lint will now feature-detect DragonScale automatically."

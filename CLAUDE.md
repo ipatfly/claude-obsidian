@@ -15,9 +15,16 @@ This vault demonstrates the LLM Wiki pattern — a persistent, compounding knowl
 ```
 _raw/           source documents — immutable, Claude reads but never modifies
 wiki/           Claude-generated knowledge base
-resources/      reference docs for skills and commands (not wiki content)
+resources/      reference docs (skills, agents, commands, hooks, docs)
   skills/       skill reference files (mirrors of .claude/skills/)
+  agents/       agent reference files (mirrors of .claude/agents/)
   commands/     command reference files
+  hooks/        hook reference files
+  docs/         user documentation (install guide, DragonScale guide, releases)
+_system/        system backend — scripts, setup tools, tests
+  bin/          one-time setup scripts (setup-vault, setup-dragonscale, setup-multi-agent)
+  scripts/      DragonScale runtime helpers (invoked by skills at session time)
+  tests/        unit tests for scripts
 _templates/     Obsidian Templater templates
 _attachments/   images and PDFs referenced by wiki pages
 ```

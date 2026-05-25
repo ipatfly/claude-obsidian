@@ -10,7 +10,7 @@ This page stays close to shipped behavior in `v1.6.0`. It explains what setup cr
 
 DragonScale is a memory-layer extension for the wiki. It covers rollups, deterministic page IDs, duplicate detection, and one opt-in topic-selection path for `/autoresearch`. It is not required for the base vault.
 
-If you never run `bash bin/setup-dragonscale.sh`, the base install and the original skill behavior remain in place. The repo uses feature detection so DragonScale can stay optional instead of becoming a hard dependency.
+If you never run `bash _system/bin/setup-dragonscale.sh`, the base install and the original skill behavior remain in place. The repo uses feature detection so DragonScale can stay optional instead of becoming a hard dependency.
 
 The concept page is broader than this guide. This guide is operational. When the spec and implementation differ in detail, prefer the shipped scripts and skills for day-to-day behavior.
 
@@ -19,9 +19,9 @@ The concept page is broader than this guide. This guide is operational. When the
 Version `1.6.0` ships all four DragonScale mechanisms as opt-in features:
 
 - Mechanism 1, Fold Operator: `skills/wiki-fold/`
-- Mechanism 2, Deterministic Page Addresses: `scripts/allocate-address.sh` plus `wiki-ingest` and `wiki-lint` integration
-- Mechanism 3, Semantic Tiling Lint: `scripts/tiling-check.py` plus `wiki-lint` integration
-- Mechanism 4, Boundary-First Autoresearch: `scripts/boundary-score.py` plus `skills/autoresearch/SKILL.md` Topic Selection logic
+- Mechanism 2, Deterministic Page Addresses: `_system/scripts/allocate-address.sh` plus `wiki-ingest` and `wiki-lint` integration
+- Mechanism 3, Semantic Tiling Lint: `_system/scripts/tiling-check.py` plus `wiki-lint` integration
+- Mechanism 4, Boundary-First Autoresearch: `_system/scripts/boundary-score.py` plus `skills/autoresearch/SKILL.md` Topic Selection logic
 
 Use `CHANGELOG.md` for the release trail, [docs/install-guide.md](./install-guide.md) for the quick-start view, and [wiki/concepts/DragonScale Memory.md](../wiki/concepts/DragonScale%20Memory.md) for the full design context.
 
@@ -34,25 +34,25 @@ DragonScale is an add-on, not a replacement for base setup. Do the normal vault 
 At minimum:
 
 - clone the repo or install the plugin
-- run `bash bin/setup-vault.sh`
+- run `bash _system/bin/setup-vault.sh`
 - open the folder as an Obsidian vault
 - use `/wiki` to scaffold or continue setup
 
 The DragonScale setup script accepts one optional argument, the vault path:
 
 ```bash
-bash bin/setup-dragonscale.sh
+bash _system/bin/setup-dragonscale.sh
 ```
 
 ```bash
-bash bin/setup-dragonscale.sh /path/to/vault
+bash _system/bin/setup-dragonscale.sh /path/to/vault
 ```
 
 If you omit the path, it uses the repo root inferred from `bin/`.
 
 ### Universal prerequisite: flock
 
-`flock` is the universal prerequisite. Mechanism 2 uses it directly in `scripts/allocate-address.sh` to guard `.vault-meta/.address.lock`. Mechanism 3 uses flock from Python to guard `.vault-meta/.tiling.lock` around cache I/O.
+`flock` is the universal prerequisite. Mechanism 2 uses it directly in `_system/scripts/allocate-address.sh` to guard `.vault-meta/.address.lock`. Mechanism 3 uses flock from Python to guard `.vault-meta/.tiling.lock` around cache I/O.
 
 Quick check:
 
@@ -94,7 +94,7 @@ If `python3` is missing:
 - Mechanism 4 cannot run
 - Mechanisms 1 and 2 still work
 
-If ollama is unreachable, `scripts/tiling-check.py` exits `10`. If ollama is reachable but `nomic-embed-text` is not installed, it exits `11`. `wiki-lint` is expected to treat those as skip conditions for semantic tiling, not as a reason to break the rest of the lint flow.
+If ollama is unreachable, `_system/scripts/tiling-check.py` exits `10`. If ollama is reachable but `nomic-embed-text` is not installed, it exits `11`. `wiki-lint` is expected to treat those as skip conditions for semantic tiling, not as a reason to break the rest of the lint flow.
 
 If the boundary helper fails, `/autoresearch` falls back to the normal ask-the-user topic path. It does not force a candidate list and it does not improvise a topic.
 
@@ -102,28 +102,28 @@ If DragonScale setup has never been run, `wiki-ingest` and `wiki-lint` keep thei
 
 ## Setup
 
-### Run bin/setup-dragonscale.sh
+### Run _system/bin/setup-dragonscale.sh
 
 Run:
 
 ```bash
-bash bin/setup-dragonscale.sh
+bash _system/bin/setup-dragonscale.sh
 ```
 
 The script is idempotent. It is safe to re-run and it does not overwrite the runtime files it already created.
 
 Before provisioning state, it verifies:
 
-- `scripts/allocate-address.sh`
-- `scripts/tiling-check.py`
+- `_system/scripts/allocate-address.sh`
+- `_system/scripts/tiling-check.py`
 - `skills/wiki-fold/SKILL.md`
 
 If any of those are missing, setup stops and tells you to reinstall the plugin.
 
 What setup does:
 
-- makes `scripts/allocate-address.sh` executable
-- makes `scripts/tiling-check.py` executable
+- makes `_system/scripts/allocate-address.sh` executable
+- makes `_system/scripts/tiling-check.py` executable
 - creates `.vault-meta/` if needed
 - creates address, tiling, and legacy-baseline state files if missing
 - creates `_raw/.manifest.json` if missing
@@ -173,7 +173,7 @@ The setup script already performs sanity checks, but it is useful to verify a fe
 Check the next address without reserving one:
 
 ```bash
-./scripts/allocate-address.sh --peek
+./_system/scripts/allocate-address.sh --peek
 ```
 
 Check that runtime state exists:
@@ -185,13 +185,13 @@ ls -1 .vault-meta
 Check tiling readiness without computing embeddings:
 
 ```bash
-python3 ./scripts/tiling-check.py --peek
+python3 ./_system/scripts/tiling-check.py --peek
 ```
 
 Check the boundary helper:
 
 ```bash
-python3 ./scripts/boundary-score.py --top 5
+python3 ./_system/scripts/boundary-score.py --top 5
 ```
 
 If your vault is small or tightly integrated, the boundary helper may report no positive-score frontier pages. That is still a valid run.
@@ -279,15 +279,15 @@ The rollout baseline is `2026-04-23`. After DragonScale adoption, post-rollout n
 The helper has three real modes:
 
 ```bash
-./scripts/allocate-address.sh
+./_system/scripts/allocate-address.sh
 ```
 
 ```bash
-./scripts/allocate-address.sh --peek
+./_system/scripts/allocate-address.sh --peek
 ```
 
 ```bash
-./scripts/allocate-address.sh --rebuild
+./_system/scripts/allocate-address.sh --rebuild
 ```
 
 The default mode reserves and prints the next address. `--peek` is read-only. `--rebuild` recomputes the counter from the highest observed `c-NNNNNN`.
@@ -295,24 +295,24 @@ The default mode reserves and prints the next address. `--peek` is read-only. `-
 Example command:
 
 ```bash
-./scripts/allocate-address.sh --peek
+./_system/scripts/allocate-address.sh --peek
 ```
 
 ### How ingest and lint use it
 
-`wiki-ingest` enables address assignment only when `./scripts/allocate-address.sh` is executable and `./.vault-meta` exists. If both conditions are true, new non-meta pages get `address:` in frontmatter. If not, ingest proceeds without addresses.
+`wiki-ingest` enables address assignment only when `./_system/scripts/allocate-address.sh` is executable and `./.vault-meta` exists. If both conditions are true, new non-meta pages get `address:` in frontmatter. If not, ingest proceeds without addresses.
 
-`wiki-lint` enables address validation only when `./scripts/allocate-address.sh` is executable and `./.vault-meta/address-counter.txt` exists. If those conditions are true, lint checks address format, uniqueness, counter consistency against `--peek`, missing addresses on post-rollout pages, and `address_map` consistency in `_raw/.manifest.json`.
+`wiki-lint` enables address validation only when `./_system/scripts/allocate-address.sh` is executable and `./.vault-meta/address-counter.txt` exists. If those conditions are true, lint checks address format, uniqueness, counter consistency against `--peek`, missing addresses on post-rollout pages, and `address_map` consistency in `_raw/.manifest.json`.
 
 The single-writer rule matters here. The allocator uses `flock`, but the ingest skill still says Phase 2 is single-writer only. Do not run parallel ingests from multiple sessions or sub-agents that assign addresses.
 
-One hard rule from the skill docs is worth repeating. Never edit `.vault-meta/address-counter.txt` directly. Only mutate it through `scripts/allocate-address.sh`.
+One hard rule from the skill docs is worth repeating. Never edit `.vault-meta/address-counter.txt` directly. Only mutate it through `_system/scripts/allocate-address.sh`.
 
 To disable Mechanism 2 without uninstalling:
 
 1. stop running ingests that depend on address assignment
 2. remove `.vault-meta/` if you want feature detection to turn off
-3. stop using `./scripts/allocate-address.sh`
+3. stop using `./_system/scripts/allocate-address.sh`
 
 Existing `address:` fields can stay on pages. They become inert metadata if the feature is disabled.
 
@@ -342,7 +342,7 @@ The helper never auto-merges pages. It only reports candidates for review.
 Example command:
 
 ```bash
-python3 ./scripts/tiling-check.py --peek
+python3 ./_system/scripts/tiling-check.py --peek
 ```
 
 That gives structured diagnostics without computing embeddings.
@@ -354,7 +354,7 @@ By default, the helper only trusts a local ollama endpoint at `http://127.0.0.1:
 Remote override example:
 
 ```bash
-python3 ./scripts/tiling-check.py --allow-remote-ollama --peek
+python3 ./_system/scripts/tiling-check.py --allow-remote-ollama --peek
 ```
 
 The normal ready path is local:
@@ -380,22 +380,22 @@ The helper also has intentional no-op behavior. If ollama or the model is missin
 Useful commands:
 
 ```bash
-python3 ./scripts/tiling-check.py --peek
+python3 ./_system/scripts/tiling-check.py --peek
 ```
 
 ```bash
-python3 ./scripts/tiling-check.py --rebuild-cache
+python3 ./_system/scripts/tiling-check.py --rebuild-cache
 ```
 
 ```bash
-python3 ./scripts/tiling-check.py --report wiki/meta/tiling-report-YYYY-MM-DD.md
+python3 ./_system/scripts/tiling-check.py --report wiki/meta/tiling-report-YYYY-MM-DD.md
 ```
 
 `--report` is real and path-confined to the vault. Use it when you want a saved report. Use `--peek` when you only want readiness and diagnostics.
 
 To disable Mechanism 3 without uninstalling:
 
-1. stop running `python3 ./scripts/tiling-check.py`
+1. stop running `python3 ./_system/scripts/tiling-check.py`
 2. stop using the semantic-tiling path in `wiki-lint`
 3. do not provision ollama or the model if you do not need them
 
@@ -418,7 +418,7 @@ The helper reads `wiki/**/*.md`, builds a wikilink graph, and emits ranked resul
 Example command:
 
 ```bash
-python3 ./scripts/boundary-score.py --json --top 5
+python3 ./_system/scripts/boundary-score.py --json --top 5
 ```
 
 That is the exact command the autoresearch skill uses for candidate generation.
@@ -437,10 +437,10 @@ The project keeps it opt-in and labels it honestly. If you want the strict memor
 
 With Mechanism 4 available, and only when `/autoresearch` is invoked without a topic, the skill:
 
-1. checks for `scripts/boundary-score.py`
+1. checks for `_system/scripts/boundary-score.py`
 2. checks for `./.vault-meta`
 3. checks for `python3`
-4. runs `./scripts/boundary-score.py --json --top 5`
+4. runs `./_system/scripts/boundary-score.py --json --top 5`
 5. presents the top frontier pages as candidate topics
 6. lets the user pick, override with free text, or decline
 
@@ -456,7 +456,7 @@ The helper suggests. The user still decides.
 
 To disable Mechanism 4 without uninstalling:
 
-1. stop running `python3 ./scripts/boundary-score.py`
+1. stop running `python3 ./_system/scripts/boundary-score.py`
 2. use `/autoresearch [topic]` with an explicit topic
 3. avoid the no-topic `/autoresearch` path if you do not want frontier suggestions
 
@@ -504,7 +504,7 @@ command -v flock
 If it is absent, install the package that provides it for your system, then rerun:
 
 ```bash
-bash bin/setup-dragonscale.sh
+bash _system/bin/setup-dragonscale.sh
 ```
 
 Do not work around this by editing `.vault-meta/address-counter.txt` directly.
@@ -522,7 +522,7 @@ curl -sS http://127.0.0.1:11434/api/version
 Check tiling readiness:
 
 ```bash
-python3 ./scripts/tiling-check.py --peek
+python3 ./_system/scripts/tiling-check.py --peek
 ```
 
 If the helper exits `10`, ollama is not reachable. If it exits `11`, pull the model:
@@ -534,7 +534,7 @@ ollama pull nomic-embed-text
 Then rerun:
 
 ```bash
-python3 ./scripts/tiling-check.py --peek
+python3 ./_system/scripts/tiling-check.py --peek
 ```
 
 Remember that Mechanism 4 does not need ollama. If you only want boundary-first autoresearch, `python3` is enough.
@@ -544,9 +544,9 @@ Remember that Mechanism 4 does not need ollama. If you only want boundary-first 
 You do not need to uninstall the repo to turn DragonScale off. Use the smallest rollback that fits what you want:
 
 - Mechanism 1: stop invoking `wiki-fold`. It uses no shared state.
-- Mechanism 2: stop using `./scripts/allocate-address.sh`. Existing `address:` frontmatter fields remain as plain content.
-- Mechanism 3: stop running `python3 ./scripts/tiling-check.py` and stop invoking the semantic-tiling path in `wiki-lint`. Cache under `.vault-meta/` is inert when not used.
-- Mechanism 4: stop running `python3 ./scripts/boundary-score.py` and avoid the no-topic `/autoresearch` path. The scorer is read-only; disabling is not invoking it.
+- Mechanism 2: stop using `./_system/scripts/allocate-address.sh`. Existing `address:` frontmatter fields remain as plain content.
+- Mechanism 3: stop running `python3 ./_system/scripts/tiling-check.py` and stop invoking the semantic-tiling path in `wiki-lint`. Cache under `.vault-meta/` is inert when not used.
+- Mechanism 4: stop running `python3 ./_system/scripts/boundary-score.py` and avoid the no-topic `/autoresearch` path. The scorer is read-only; disabling is not invoking it.
 
 `.vault-meta/` is a shared gate for Mechanisms 2, 3, and 4. Removing it disables all three together, not just one.
 
@@ -561,5 +561,5 @@ Then stop invoking the DragonScale-specific helpers and skills. This leaves your
 If you later want DragonScale back, rerun:
 
 ```bash
-bash bin/setup-dragonscale.sh
+bash _system/bin/setup-dragonscale.sh
 ```

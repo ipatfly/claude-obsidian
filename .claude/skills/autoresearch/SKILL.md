@@ -40,7 +40,7 @@ When `/autoresearch` is invoked WITHOUT a topic AND the vault has adopted Dragon
 Feature detection (shell):
 
 ```bash
-if [ -x ./scripts/boundary-score.py ] && [ -d ./.vault-meta ] && command -v python3 >/dev/null 2>&1; then
+if [ -x ./_system/scripts/boundary-score.py ] && [ -d ./.vault-meta ] && command -v python3 >/dev/null 2>&1; then
   BOUNDARY_MODE=1
 else
   BOUNDARY_MODE=0
@@ -49,7 +49,7 @@ fi
 
 When `BOUNDARY_MODE=1`:
 
-1. Run `./scripts/boundary-score.py --json --top 5`. Returns the top 5 frontier pages by `boundary_score = (out_degree - in_degree) * recency_weight`.
+1. Run `./_system/scripts/boundary-score.py --json --top 5`. Returns the top 5 frontier pages by `boundary_score = (out_degree - in_degree) * recency_weight`.
 2. **Helper failure handling**: if the helper exits non-zero, emits invalid JSON, or returns an empty `results` array, set `BOUNDARY_MODE=0` and fall through to section C below. Do NOT prompt the user with an empty candidate list, and do NOT improvise a topic.
 3. Present the candidate list to the user: "Your top frontier pages are: [list]. Research which one? (1-5, or type a topic to override, or say 'cancel' to be asked normally.)"
 4. If the user picks 1-5, use the selected page's title as the topic.
