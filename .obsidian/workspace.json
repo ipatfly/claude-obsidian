@@ -37,12 +37,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "_raw/Interpreted-Context-Methdology.md",
+                "file": "wiki/sources/rindig-interpreted-context-methodology.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Interpreted-Context-Methdology"
+              "title": "rindig-interpreted-context-methodology"
             }
           }
         ],
@@ -218,21 +218,42 @@
   },
   "active": "daa117e496c99f07",
   "lastOpenFiles": [
-    "wiki/sources/rindig-interpreted-context-methodology.md",
-    "wiki/concepts/Interpreted Context Methodology.md",
-    "wiki/entities/Jake Van Clief.md",
-    "wiki/index.md",
-    "WIKI.md",
-    "GEMINI.md",
-    "wiki/Wiki Map.canvas",
-    "wiki/entities/YuNaga224-obsidian-memory-mcp.md",
-    "wiki/entities/jacksteamdev-obsidian-mcp-tools.md",
-    "wiki/entities/heyitsnoah-claudesidian.md",
-    "wiki/entities/ekadetov-llm-wiki.md",
-    "_raw/Interpreted-Context-Methdology.md",
-    "README.md",
-    "_raw/claude-obsidian-ecosystem-research.md",
-    "_raw",
-    "skills-lock.json"
+    "resources/commands/wiki.md",
+    "resources/commands/save.md",
+    "resources/commands/canvas.md",
+    "resources/commands/autoresearch.md",
+    "resources/commands",
+    "resources/skills/autoresearch/references/program.md",
+    "resources/skills/wiki/references/rest-api.md",
+    "resources/skills/wiki/references/plugins.md",
+    "resources/skills/wiki/references/modes.md",
+    "resources/skills/wiki/references/mcp-setup.md",
+    "resources/skills/wiki/references/git-setup.md",
+    "resources/skills/wiki/references/frontmatter.md",
+    "resources/skills/wiki/references/css-snippets.md",
+    "resources/skills/wiki-fold/references/fold-template.md",
+    "resources/skills/canvas/references/canvas-spec.md",
+    "resources/skills/autoresearch/references",
+    "resources/skills/autoresearch/SKILL.md",
+    "resources/skills/wiki-query/SKILL.md",
+    "resources/skills/wiki/references",
+    "resources/skills/wiki/SKILL.md",
+    "resources/skills/wiki-lint/SKILL.md",
+    "resources/skills/wiki-ingest/SKILL.md",
+    "resources/skills/wiki-fold/references",
+    "resources/skills/wiki-fold/SKILL.md",
+    "resources/skills/save/SKILL.md",
+    "resources/skills/obsidian-markdown/SKILL.md",
+    "resources/skills/obsidian-bases/SKILL.md",
+    "resources/skills/defuddle/SKILL.md",
+    "resources/skills/canvas/references",
+    "resources/skills/canvas/SKILL.md",
+    "resources/skills/wiki-query",
+    "resources/skills/wiki-lint",
+    "resources/skills/wiki-ingest",
+    "resources/skills/wiki-fold",
+    "resources/skills/wiki",
+    "wiki/sources/claude-obsidian-ecosystem-research.md",
+    "wiki/Wiki Map.canvas"
   ]
 }

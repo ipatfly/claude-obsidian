@@ -15,6 +15,9 @@ This vault demonstrates the LLM Wiki pattern — a persistent, compounding knowl
 ```
 _raw/           source documents — immutable, Claude reads but never modifies
 wiki/           Claude-generated knowledge base
+resources/      reference docs for skills and commands (not wiki content)
+  skills/       skill reference files (mirrors of .claude/skills/)
+  commands/     command reference files
 _templates/     Obsidian Templater templates
 _attachments/   images and PDFs referenced by wiki pages
 ```
@@ -61,7 +64,7 @@ Do NOT read the wiki for general coding questions or things already in this proj
 ## MCP (Optional)
 
 If you configured the MCP server, Claude can read and write vault notes directly.
-See `skills/wiki/references/mcp-setup.md` for setup instructions.
+See `resources/skills/wiki/references/mcp-setup.md` for setup instructions.
 
 ## Personal Setup (ipatfly)
 
