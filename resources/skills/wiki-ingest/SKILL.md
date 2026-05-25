@@ -129,10 +129,14 @@ Trigger: user drops multiple files or says "ingest all of these."
 Steps:
 
 1. List all files to process. Confirm with user before starting.
-2. Process each source following the single ingest flow. Defer cross-referencing between sources until step 3.
-3. After all sources: do a cross-reference pass. Look for connections between the newly ingested sources.
-4. Update index, hot cache, and log once at the end (not per-source).
-5. Report: "Processed N sources. Created X pages, updated Y pages. Here are the key connections I found."
+2. **If 10 or more sources:** suggest parallel sub-agents before proceeding:
+   > "That's N sources. I can process them sequentially (simpler, one context) or dispatch parallel sub-agents — one per source, running simultaneously (faster for large batches, but sources must be mostly independent with few shared entities). Which do you prefer?"
+   Only suggest parallel if sources are likely independent. If they clearly share many entities (e.g., all about the same project), recommend sequential.
+3. **Sequential mode:** Process each source following the single ingest flow. Defer cross-referencing between sources until step 4.
+4. **Parallel mode:** Dispatch one `wiki-ingest` sub-agent per source (Agent tool, subagent_type: `wiki-ingest`). Each agent processes one source fully but skips `wiki/index.md`, `wiki/log.md`, and `wiki/hot.md` updates. Collect all results, then do a single sequential pass: address allocation, cross-referencing, index, log, hot cache.
+5. After all sources: do a cross-reference pass. Look for connections between the newly ingested sources.
+6. Update index, hot cache, and log once at the end (not per-source).
+7. Report: "Processed N sources. Created X pages, updated Y pages. Here are the key connections I found."
 
 Batch ingest is less interactive. For 30+ sources, expect significant processing time. Check in with the user after every 10 sources.
 
