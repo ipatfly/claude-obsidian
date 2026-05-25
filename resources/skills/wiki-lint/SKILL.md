@@ -13,6 +13,19 @@ Run lint after every 10-15 ingests, or weekly. Ask before auto-fixing anything. 
 
 ---
 
+## Dispatch
+
+**Always dispatch the `wiki-lint` sub-agent** instead of running lint inline. The scan is read-heavy and would consume significant main context.
+
+```
+Dispatch: Agent tool, subagent_type: wiki-lint
+Pass: vault path, today's date, scope (full or specific folder)
+```
+
+After the agent finishes, report the summary to the user and offer to walk through the issues. Do not re-read the report yourself unless the user asks a specific follow-up question — the agent has already written it to `wiki/meta/lint-report-YYYY-MM-DD.md`.
+
+---
+
 ## Lint Checks
 
 Work through these in order:
