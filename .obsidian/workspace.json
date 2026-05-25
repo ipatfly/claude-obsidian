@@ -218,6 +218,9 @@
   },
   "active": "daa117e496c99f07",
   "lastOpenFiles": [
+    "resources/hooks/hooks.json",
+    "resources/hooks/README.md",
+    "resources/hooks",
     "resources/commands/wiki.md",
     "resources/commands/save.md",
     "resources/commands/canvas.md",
@@ -247,13 +250,10 @@
     "resources/skills/obsidian-bases/SKILL.md",
     "resources/skills/defuddle/SKILL.md",
     "resources/skills/canvas/references",
-    "resources/skills/canvas/SKILL.md",
     "resources/skills/wiki-query",
     "resources/skills/wiki-lint",
     "resources/skills/wiki-ingest",
     "resources/skills/wiki-fold",
-    "resources/skills/wiki",
-    "wiki/sources/claude-obsidian-ecosystem-research.md",
     "wiki/Wiki Map.canvas"
   ]
 }
