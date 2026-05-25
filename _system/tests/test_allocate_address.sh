@@ -10,7 +10,7 @@ set -euo pipefail
 
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 VAULT_ROOT="$(dirname "$SCRIPT_DIR")"
-ALLOC="$VAULT_ROOT/scripts/allocate-address.sh"
+ALLOC="$VAULT_ROOT/_system/scripts/allocate-address.sh"
 
 PASS=0
 FAIL=0
