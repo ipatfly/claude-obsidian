@@ -19,10 +19,6 @@ wiki/           Claude-generated knowledge base
   skills/       active skills (invoked by Claude Code/Gemini CLI)
   agents/       active agents (loaded by Claude Code/Gemini CLI)
   memory/       project memory and context
-resources/      user reference docs (commands, hooks, docs)
-  commands/     command reference files
-  hooks/        hook reference files
-  docs/         user documentation (install guide, DragonScale guide, releases)
 _system/        system backend — scripts, setup tools, tests
   bin/          one-time setup scripts (setup-vault, setup-dragonscale, setup-multi-agent)
   scripts/      DragonScale runtime helpers (invoked by skills at session time)
