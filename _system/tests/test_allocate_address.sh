@@ -9,7 +9,7 @@
 set -euo pipefail
 
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
-VAULT_ROOT="$(dirname "$SCRIPT_DIR")"
+VAULT_ROOT="$(dirname "$(dirname "$SCRIPT_DIR")")"
 ALLOC="$VAULT_ROOT/_system/scripts/allocate-address.sh"
 
 PASS=0
@@ -28,51 +28,51 @@ assert_eq() {
 TMP=$(mktemp -d -t ds-test-XXXXXX)
 trap 'rm -rf "$TMP"' EXIT
 
-mkdir -p "$TMP/scripts" "$TMP/wiki"
-cp "$ALLOC" "$TMP/scripts/allocate-address.sh"
-chmod +x "$TMP/scripts/allocate-address.sh"
+mkdir -p "$TMP/_system/scripts" "$TMP/wiki"
+cp "$ALLOC" "$TMP/_system/scripts/allocate-address.sh"
+chmod +x "$TMP/_system/scripts/allocate-address.sh"
 cd "$TMP"
 
 # --- Test 1: rebuild on empty vault = 1 ---
-OUT=$(./scripts/allocate-address.sh --rebuild 2>&1)
+OUT=$(./_system/scripts/allocate-address.sh --rebuild 2>&1)
 assert_eq "rebuild on empty vault" "Counter rebuilt: next = 1" "$OUT"
 assert_eq "counter file value" "1" "$(cat .vault-meta/address-counter.txt)"
 
 # --- Test 2: peek does not increment ---
-P1=$(./scripts/allocate-address.sh --peek)
-P2=$(./scripts/allocate-address.sh --peek)
+P1=$(./_system/scripts/allocate-address.sh --peek)
+P2=$(./_system/scripts/allocate-address.sh --peek)
 assert_eq "peek idempotent" "$P1" "$P2"
 
 # --- Test 3: allocate returns c-000001 and increments ---
-A1=$(./scripts/allocate-address.sh)
+A1=$(./_system/scripts/allocate-address.sh)
 assert_eq "first alloc" "c-000001" "$A1"
 assert_eq "counter after 1 alloc" "2" "$(cat .vault-meta/address-counter.txt)"
 
 # --- Test 4: monotonic sequence ---
-A2=$(./scripts/allocate-address.sh)
-A3=$(./scripts/allocate-address.sh)
+A2=$(./_system/scripts/allocate-address.sh)
+A3=$(./_system/scripts/allocate-address.sh)
 assert_eq "second alloc"  "c-000002" "$A2"
 assert_eq "third alloc"   "c-000003" "$A3"
 
 # --- Test 5: concurrent allocations are unique ---
-./scripts/allocate-address.sh --rebuild >/dev/null
+./_system/scripts/allocate-address.sh --rebuild >/dev/null
 for i in $(seq 1 10); do
-  (./scripts/allocate-address.sh >> concurrent.txt) &
+  (./_system/scripts/allocate-address.sh >> concurrent.txt) &
 done
 wait
-UNIQ=$(sort -u concurrent.txt | wc -l)
-TOTAL=$(wc -l < concurrent.txt)
+UNIQ=$(sort -u concurrent.txt | wc -l | tr -d ' ')
+TOTAL=$(wc -l < concurrent.txt | tr -d ' ')
 assert_eq "10 concurrent allocs: unique count" "10" "$UNIQ"
 assert_eq "10 concurrent allocs: total count"  "10" "$TOTAL"
 
 # --- Test 6: corrupt counter -> exit 3 ---
 echo "not-a-number" > .vault-meta/address-counter.txt
 set +e
-./scripts/allocate-address.sh > /dev/null 2>&1
+./_system/scripts/allocate-address.sh > /dev/null 2>&1
 EC=$?
 set -e
 assert_eq "corrupt counter exit" "3" "$EC"
-./scripts/allocate-address.sh --rebuild > /dev/null
+./_system/scripts/allocate-address.sh --rebuild > /dev/null
 
 # --- Test 7: missing counter recovers from max(c-)+1 ---
 rm -f .vault-meta/address-counter.txt
@@ -83,7 +83,7 @@ type: concept
 address: c-000500
 ---
 EOF
-REC=$(./scripts/allocate-address.sh --peek 2>/dev/null)
+REC=$(./_system/scripts/allocate-address.sh --peek 2>/dev/null)
 assert_eq "recovery from max observed" "501" "$REC"
 
 # --- Test 8: frontmatter-only scan ignores code-block examples ---
@@ -98,7 +98,7 @@ type: concept
 address: c-999999
 ```
 EOF
-REBUILT=$(./scripts/allocate-address.sh --rebuild 2>&1)
+REBUILT=$(./_system/scripts/allocate-address.sh --rebuild 2>&1)
 assert_eq "code-block ignored, rebuild to 1" "Counter rebuilt: next = 1" "$REBUILT"
 
 # --- Summary ---
