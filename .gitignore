@@ -115,3 +115,6 @@ _attachments/
 
 # Ignore Smart Environment folder
 .smart-env
+
+# Ignore local upstream reference folder
+_reference/

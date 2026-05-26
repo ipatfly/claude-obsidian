@@ -21,7 +21,7 @@ echo "Setting up DragonScale Memory at: $VAULT"
 cd "$VAULT"
 
 # ── 1. Verify required artifacts that ship with the plugin ───────────────────
-for required in "_system/scripts/allocate-address.sh" "_system/scripts/tiling-check.py" "resources/skills/wiki-fold/SKILL.md"; do
+for required in "_system/scripts/allocate-address.sh" "_system/scripts/tiling-check.py" ".claude/skills/wiki-fold/SKILL.md"; do
   if [ ! -e "$required" ]; then
     echo "ERR: missing $required. Reinstall the claude-obsidian plugin." >&2
     exit 1
@@ -49,7 +49,7 @@ if [ ! -f .vault-meta/tiling-thresholds.json ]; then
   },
   "calibrated": false,
   "calibration_pairs_labeled": 0,
-  "notes": "Conservative seed thresholds, NOT calibrated against this vault. See resources/skills/wiki-lint/SKILL.md Semantic Tiling section for the calibration procedure."
+  "notes": "Conservative seed thresholds, NOT calibrated against this vault. See .claude/skills/wiki-lint/SKILL.md Semantic Tiling section for the calibration procedure."
 }
 JSON
   echo "OK  .vault-meta/tiling-thresholds.json initialized with conservative seed bands"
@@ -123,5 +123,5 @@ fi
 echo ""
 echo "DragonScale setup complete."
 echo "See wiki/concepts/DragonScale Memory.md for the full spec."
-echo "See resources/skills/wiki-fold/ for Mechanism 1 (log folds)."
+echo "See .claude/skills/wiki-fold/ for Mechanism 1 (log folds)."
 echo "wiki-ingest and wiki-lint will now feature-detect DragonScale automatically."

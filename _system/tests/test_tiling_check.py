@@ -17,8 +17,9 @@ import sys
 import tempfile
 from pathlib import Path
 
-ROOT = Path(__file__).resolve().parent.parent
-HELPER = ROOT / "scripts" / "tiling-check.py"
+VAULT_ROOT = Path(__file__).resolve().parent.parent.parent
+ROOT = VAULT_ROOT
+HELPER = VAULT_ROOT / "_system" / "scripts" / "tiling-check.py"
 
 spec = importlib.util.spec_from_file_location("tc", HELPER)
 tc = importlib.util.module_from_spec(spec)

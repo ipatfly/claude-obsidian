@@ -15,9 +15,11 @@ This vault demonstrates the LLM Wiki pattern — a persistent, compounding knowl
 ```
 _raw/           source documents — immutable, Claude reads but never modifies
 wiki/           Claude-generated knowledge base
-resources/      reference docs (skills, agents, commands, hooks, docs)
-  skills/       skill reference files (mirrors of .claude/skills/)
-  agents/       agent reference files (mirrors of .claude/agents/)
+.claude/        active workspace configuration (source of truth)
+  skills/       active skills (invoked by Claude Code/Gemini CLI)
+  agents/       active agents (loaded by Claude Code/Gemini CLI)
+  memory/       project memory and context
+resources/      user reference docs (commands, hooks, docs)
   commands/     command reference files
   hooks/        hook reference files
   docs/         user documentation (install guide, DragonScale guide, releases)
@@ -71,7 +73,7 @@ Do NOT read the wiki for general coding questions or things already in this proj
 ## MCP (Optional)
 
 If you configured the MCP server, Claude can read and write vault notes directly.
-See `resources/skills/wiki/references/mcp-setup.md` for setup instructions.
+See `.claude/skills/wiki/references/mcp-setup.md` for setup instructions.
 
 ## Personal Setup (ipatfly)
 

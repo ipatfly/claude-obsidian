@@ -432,14 +432,14 @@
     ]
   },
   "wiki/overview.md": {
-    "scroll": 3.8483516483516484,
+    "scroll": 0.9340659340659341,
     "cursor": {
       "from": {
-        "line": 17,
+        "line": 2,
         "ch": 0
       },
       "to": {
-        "line": 17,
+        "line": 2,
         "ch": 0
       }
     },
@@ -701,5 +701,33 @@
     "expandedKeys": [
       "item-1-0"
     ]
+  },
+  "wiki/meta/2026-04-10-backlink-empire-session.md": {
+    "scroll": 0,
+    "cursor": {
+      "from": {
+        "line": 20,
+        "ch": 0
+      },
+      "to": {
+        "line": 20,
+        "ch": 0
+      }
+    },
+    "expandedKeys": []
+  },
+  "wiki/meta/lint-report-2026-05-26.md": {
+    "scroll": 0,
+    "cursor": {
+      "from": {
+        "line": 8,
+        "ch": 0
+      },
+      "to": {
+        "line": 8,
+        "ch": 0
+      }
+    },
+    "expandedKeys": []
   }
 }

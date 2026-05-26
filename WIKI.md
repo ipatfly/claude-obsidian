@@ -262,9 +262,9 @@ vault/
 │
 ├── wiki/                   # Layer 2: LLM-generated knowledge base
 │   ├── index.md            # master catalog of all wiki pages
-│   ├── log.md              # chronological record of all operations
+│   ├── log.md              # chronological, append-only record of all operations
 │   ├── hot.md              # hot cache: recent context summary (~500 words)
-│   ├── overview.md         # executive summary of the entire wiki
+│   ├── overview.md         # alltagstaugliche executive summary of the entire wiki
 │   ├── sources/            # one summary page per raw source
 │   ├── entities/           # people, orgs, products, repos
 │   │   └── _index.md
@@ -274,12 +274,22 @@ vault/
 │   │   └── _index.md
 │   ├── comparisons/        # side-by-side analyses
 │   ├── questions/          # filed answers to user queries
-│   └── meta/               # dashboards, lint reports, conventions
+│   └── meta/               # dashboards, lint reports, session protocols
+│
+├── .claude/                # Layer 3: active agent files & source of truth
+│   ├── skills/             # active agent skills (wiki-ingest, wiki-lint, etc.)
+│   ├── agents/             # active agent files
+│   └── memory/             # project memory and context files
+│
+├── _system/                # Layer 4: system backend (setup, scripts, tests)
+│   ├── bin/                # one-time setup scripts (setup-vault.sh, etc.)
+│   ├── scripts/            # DragonScale runtime helpers (allocate-address, etc.)
+│   └── tests/              # unit tests forscripts
 │
 ├── _templates/             # Templater templates
 ├── _attachments/           # images and PDFs referenced by wiki pages
 │
-├── WIKI.md                 # Layer 3: this file
+├── WIKI.md                 # Technical system reference document (this file)
 └── .obsidian/              # Obsidian config (auto-managed)
 ```
 
@@ -652,9 +662,14 @@ updated: 2026-04-07
 
 ### wiki/log.md
 
-Append-only. New entries go at the TOP. Each entry: `## [YYYY-MM-DD] operation | title`
+**Lightweight Append-Only Logbucheinträge:**
+Dieses File dient als chronologisches Gesamtverzeichnis aller Aktionen des Wikis. Einträge werden **immer ganz oben (am Anfang)** angehängt. Jeder Eintrag hat das Format `## [YYYY-MM-DD] operation | Titel` und enthält nur eine kurze Zusammenfassung der erstellten/aktualisierten Seiten sowie eine kurze Kernaussage (Key Insight).
 
-Parse recent entries:
+**Systematik & Abgrenzung zu `wiki/meta/`:**
+* **`wiki/log.md` (Verzeichnis):** Bleibt bewusst schlank und übersichtlich, damit es leicht gelesen und geparst werden kann. Es bläht das Git-Repository nicht auf und verbraucht im Agenten-Kontext nur minimale Token.
+* **`wiki/meta/` (Details):** Enthält die vollständigen, umfangreichen Ergebnisse einzelner Operationen. Ein Lint-Lauf dokumentiert seinen vollständigen Report als `wiki/meta/lint-report-YYYY-MM-DD.md`. Komplexe Arbeitsberichte oder Protokolle von Versions-Releases liegen als separate Notes (z. B. `wiki/meta/claude-obsidian-v1.4-release-session.md`) ebenfalls hier. `wiki/log.md` verweist dann per Wikilink lediglich auf diese ausführlichen Berichte.
+
+Parse die letzten 10 Logbucheinträge:
 ```bash
 grep "^## \[" wiki/log.md | head -10
 ```
