@@ -37,12 +37,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "WIKI.md",
+                "file": "wiki/meta/dashboard.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "WIKI"
+              "title": "dashboard"
             }
           }
         ],
@@ -211,13 +211,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "WIKI.md",
+                "file": "wiki/meta/dashboard.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of WIKI"
+              "title": "Outline of dashboard"
             }
           }
         ],
@@ -249,14 +249,23 @@
   },
   "active": "daa117e496c99f07",
   "lastOpenFiles": [
-    "wiki/sources/The Foundation.md",
+    "wiki/sources/_index.md",
+    "wiki/meta/dashboard.md",
+    "wiki/entities/_index.md",
+    "wiki/concepts/_index.md",
+    "wiki/getting-started.md",
+    "wiki/overview.md",
+    "wiki/concepts/LLM Wiki Pattern.md",
     "wiki/index.md",
+    "README.md",
+    "ATTRIBUTION.md",
+    "WIKI.md",
+    "wiki/sources/The Foundation.md",
     "wiki/concepts/Tool Ladder.md",
     "wiki/sources/Implementation Playbooks.md",
     "wiki/concepts/Cliefnotes Academy.md",
     "wiki/sources/Building Your Stack.md",
     "wiki/concepts/Interpreted Context Methodology.md",
-    "wiki/overview.md",
     "wiki/entities/Claude SEO.md",
     "wiki/entities/Ar9av-obsidian-wiki.md",
     "wiki/entities/Jake Van Clief.md",
@@ -268,15 +277,6 @@
     "_raw/ingested/4.5 Where This Goes - The Foundation.md",
     "_raw/ingested/4.4 Making Claude Understand Your Project - The Foundation.md",
     "_raw/ingested/4.3 Claude Desktop as a Thinking Partner - The Foundation.md",
-    "_raw/ingested/4.2 Claude Code in Practice - The Foundation.md",
-    "_raw/ingested/4.1 Install and First Use - The Foundation.md",
-    "_raw/ingested/3.3 Pre-Build Planning and Prompt Sequencing - Implementation Playbooks.md",
-    "_raw/ingested/3.3 Common Mistakes and How to Fix Them - The Foundation.md",
-    "_raw/ingested/3.2 GitHub and Folder Structure - Implementation Playbooks.md",
-    "_raw/ingested/3.2 Customizing for Your Use Case - The Foundation.md",
-    "_raw/ingested/3.1 The Full Walkthrough (23 Min Video) - The Foundation.md",
-    "_raw/ingested/3.1  Build and Deploy a Website - Implementation Playbooks.md",
-    "_raw/ingested/2.4 Session Persistence Across Devices - Building Your Stack.md",
     "resources/docs/releases",
     "resources/docs/install-guide.pdf",
     "resources/docs",

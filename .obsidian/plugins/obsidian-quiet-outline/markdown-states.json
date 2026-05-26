@@ -18,7 +18,7 @@
     ]
   },
   "wiki/index.md": {
-    "scroll": 74.11968992248062,
+    "scroll": 63.84992248062016,
     "cursor": {
       "from": {
         "line": 83,
@@ -432,7 +432,7 @@
     ]
   },
   "wiki/overview.md": {
-    "scroll": 40.559244791666664,
+    "scroll": 16.178021978021977,
     "cursor": {
       "from": {
         "line": 17,
@@ -535,6 +535,134 @@
       },
       "to": {
         "line": 12,
+        "ch": 0
+      }
+    },
+    "expandedKeys": [
+      "item-1-0"
+    ]
+  },
+  "ATTRIBUTION.md": {
+    "scroll": 0,
+    "cursor": {
+      "from": {
+        "line": 0,
+        "ch": 0
+      },
+      "to": {
+        "line": 0,
+        "ch": 0
+      }
+    },
+    "expandedKeys": [
+      "item-1-0"
+    ]
+  },
+  "README.md": {
+    "scroll": 0,
+    "cursor": {
+      "from": {
+        "line": 0,
+        "ch": 0
+      },
+      "to": {
+        "line": 0,
+        "ch": 0
+      }
+    },
+    "expandedKeys": []
+  },
+  "wiki/concepts/LLM Wiki Pattern.md": {
+    "scroll": 0,
+    "cursor": {
+      "from": {
+        "line": 25,
+        "ch": 0
+      },
+      "to": {
+        "line": 25,
+        "ch": 0
+      }
+    },
+    "expandedKeys": [
+      "item-1-0"
+    ]
+  },
+  "wiki/getting-started.md": {
+    "scroll": 73.60091145833333,
+    "cursor": {
+      "from": {
+        "line": 92,
+        "ch": 0
+      },
+      "to": {
+        "line": 92,
+        "ch": 1
+      }
+    },
+    "expandedKeys": [
+      "item-1-0",
+      "item-2-1"
+    ]
+  },
+  "wiki/meta/dashboard.md": {
+    "scroll": 47.93951801591015,
+    "cursor": {
+      "from": {
+        "line": 15,
+        "ch": 0
+      },
+      "to": {
+        "line": 15,
+        "ch": 0
+      }
+    },
+    "expandedKeys": [
+      "item-1-0",
+      "item-2-1"
+    ]
+  },
+  "wiki/concepts/_index.md": {
+    "scroll": 32.60031007751938,
+    "cursor": {
+      "from": {
+        "line": 21,
+        "ch": 0
+      },
+      "to": {
+        "line": 21,
+        "ch": 0
+      }
+    },
+    "expandedKeys": [
+      "item-1-0"
+    ]
+  },
+  "wiki/entities/_index.md": {
+    "scroll": 0,
+    "cursor": {
+      "from": {
+        "line": 15,
+        "ch": 0
+      },
+      "to": {
+        "line": 15,
+        "ch": 0
+      }
+    },
+    "expandedKeys": [
+      "item-1-0"
+    ]
+  },
+  "wiki/sources/_index.md": {
+    "scroll": 5.412371134020619,
+    "cursor": {
+      "from": {
+        "line": 15,
+        "ch": 0
+      },
+      "to": {
+        "line": 15,
         "ch": 0
       }
     },
