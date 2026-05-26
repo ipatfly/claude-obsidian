@@ -249,6 +249,8 @@
   },
   "active": "daa117e496c99f07",
   "lastOpenFiles": [
+    "_blueprints",
+    "_raw/2603.16021v2.pdf",
     "wiki/overview.md",
     "_system/scripts/__pycache__/tiling-check.cpython-314.pyc",
     "_system/scripts/__pycache__/boundary-score.cpython-314.pyc",
@@ -288,7 +290,6 @@
     "_reference/wiki/entities/Claudian-YishenTu.md",
     "_reference/wiki/entities/Nexus-claudesidian-mcp.md",
     "_reference/wiki/entities/Ar9av-obsidian-wiki.md",
-    "_reference/wiki/comparisons/Wiki vs RAG.md",
     "_reference/wiki/canvases/youtube-explainer.canvas",
     "_reference/wiki/canvases/welcome.canvas",
     "_reference/wiki/canvases/main.canvas",
@@ -298,7 +299,6 @@
     "_reference/wiki/questions",
     "_reference/wiki/entities",
     "_reference/wiki/folds",
-    "_reference/wiki/canvases",
     "_reference/wiki/Wiki Map.canvas",
     "wiki/canvases/claude-obsidian-presentation.canvas",
     "wiki/Wiki Map.canvas"

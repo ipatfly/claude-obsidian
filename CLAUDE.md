@@ -14,6 +14,8 @@ This vault demonstrates the LLM Wiki pattern — a persistent, compounding knowl
 
 ```
 _raw/           source documents — immutable, Claude reads but never modifies
+_reference/     external workspaces/repos used as inspiration (NOT ingested, only read)
+_blueprints/    distilled system principles and reusable CLAUDE.md templates
 wiki/           Claude-generated knowledge base
 .claude/        active workspace configuration (source of truth)
   skills/       active skills (invoked by Claude Code/Gemini CLI)
