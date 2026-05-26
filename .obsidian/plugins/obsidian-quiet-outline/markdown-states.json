@@ -18,15 +18,15 @@
     ]
   },
   "wiki/index.md": {
-    "scroll": 75.76558139534883,
+    "scroll": 25.225260416666668,
     "cursor": {
       "from": {
-        "line": 31,
-        "ch": 0
+        "line": 83,
+        "ch": 86
       },
       "to": {
-        "line": 31,
-        "ch": 0
+        "line": 83,
+        "ch": 86
       }
     },
     "expandedKeys": [
@@ -34,7 +34,7 @@
     ]
   },
   "wiki/entities/Jake Van Clief.md": {
-    "scroll": 0,
+    "scroll": 19.463975694444443,
     "cursor": {
       "from": {
         "line": 16,
@@ -50,19 +50,20 @@
     ]
   },
   "wiki/concepts/Interpreted Context Methodology.md": {
-    "scroll": 0,
+    "scroll": 51.21279761904762,
     "cursor": {
       "from": {
-        "line": 18,
+        "line": 21,
         "ch": 0
       },
       "to": {
-        "line": 18,
+        "line": 21,
         "ch": 0
       }
     },
     "expandedKeys": [
-      "item-1-0"
+      "item-1-0",
+      "item-2-3"
     ]
   },
   "wiki/sources/rindig-interpreted-context-methodology.md": {
@@ -412,5 +413,133 @@
       }
     },
     "expandedKeys": []
+  },
+  "wiki/sources/The Foundation.md": {
+    "scroll": 9.71264367816092,
+    "cursor": {
+      "from": {
+        "line": 64,
+        "ch": 153
+      },
+      "to": {
+        "line": 64,
+        "ch": 154
+      }
+    },
+    "expandedKeys": [
+      "item-1-0",
+      "item-2-1"
+    ]
+  },
+  "wiki/overview.md": {
+    "scroll": 40.559244791666664,
+    "cursor": {
+      "from": {
+        "line": 17,
+        "ch": 0
+      },
+      "to": {
+        "line": 17,
+        "ch": 0
+      }
+    },
+    "expandedKeys": [
+      "item-1-0"
+    ]
+  },
+  "wiki/entities/Ar9av-obsidian-wiki.md": {
+    "scroll": 0,
+    "cursor": {
+      "from": {
+        "line": 17,
+        "ch": 0
+      },
+      "to": {
+        "line": 17,
+        "ch": 0
+      }
+    },
+    "expandedKeys": []
+  },
+  "wiki/entities/Claude SEO.md": {
+    "scroll": 0,
+    "cursor": {
+      "from": {
+        "line": 21,
+        "ch": 0
+      },
+      "to": {
+        "line": 21,
+        "ch": 0
+      }
+    },
+    "expandedKeys": []
+  },
+  "wiki/concepts/Cliefnotes Academy.md": {
+    "scroll": 34.09326171875,
+    "cursor": {
+      "from": {
+        "line": 25,
+        "ch": 0
+      },
+      "to": {
+        "line": 25,
+        "ch": 0
+      }
+    },
+    "expandedKeys": [
+      "item-1-0",
+      "item-2-1"
+    ]
+  },
+  "wiki/sources/Implementation Playbooks.md": {
+    "scroll": 14.971264367816092,
+    "cursor": {
+      "from": {
+        "line": 73,
+        "ch": 2
+      },
+      "to": {
+        "line": 73,
+        "ch": 10
+      }
+    },
+    "expandedKeys": [
+      "item-1-0",
+      "item-2-1"
+    ]
+  },
+  "wiki/sources/Building Your Stack.md": {
+    "scroll": 15.583333333333334,
+    "cursor": {
+      "from": {
+        "line": 15,
+        "ch": 0
+      },
+      "to": {
+        "line": 15,
+        "ch": 0
+      }
+    },
+    "expandedKeys": [
+      "item-1-0",
+      "item-2-1"
+    ]
+  },
+  "wiki/concepts/Tool Ladder.md": {
+    "scroll": 2.8275862068965516,
+    "cursor": {
+      "from": {
+        "line": 12,
+        "ch": 0
+      },
+      "to": {
+        "line": 12,
+        "ch": 0
+      }
+    },
+    "expandedKeys": [
+      "item-1-0"
+    ]
   }
 }

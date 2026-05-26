@@ -1,11 +1,10 @@
 ---
 type: concept
-title: "Tool Ladder"
+title: Tool Ladder
 address: c-000019
 created: 2026-05-26
 updated: 2026-05-26
 tags:
-  - concept, architecture, workflow
 relevance: core
 signal_to_noise: high
 verdict: foundational

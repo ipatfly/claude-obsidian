@@ -74,4 +74,7 @@ Defines project parameters.
 ```
 
 ## Comparisons & Connections
-ICM's layered context loading directly mirrors the hot cache $ightarrow$ index $ightarrow$ domain $ightarrow$ page drilldown in [[wiki-query]]: both prioritize loading the minimum necessary context early to optimize prompt caching and reduce token spend.
+ICM's layered context loading directly mirrors the hot cache $
+ightarrow$ index $
+ightarrow$ domain $
+ightarrow$ page drilldown in [[wiki-query]]: both prioritize loading the minimum necessary context early to optimize prompt caching and reduce token spend.
