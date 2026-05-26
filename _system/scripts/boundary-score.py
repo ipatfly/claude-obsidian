@@ -46,7 +46,7 @@ import sys
 from datetime import date, datetime, timezone
 from pathlib import Path
 
-VAULT_ROOT = Path(__file__).resolve().parent.parent
+VAULT_ROOT = Path(__file__).resolve().parent.parent.parent
 WIKI_DIR = VAULT_ROOT / "wiki"
 
 EXCLUDE_TYPES = {"meta", "fold"}

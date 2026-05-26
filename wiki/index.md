@@ -45,6 +45,8 @@ Navigation: [[overview]] | [[log]] | [[hot]] | [[dashboard]] | [[Wiki Map]] | [[
 - [[Source-First Synthesis]]: provenance discipline; raw sources stay immutable while the wiki layer is synthesized and cited (status: developing)
 - [[Query-Time Retrieval]]: wiki query path synthesizes with citations; complementary to Obsidian's in-vault search (status: developing)
 - [[Interpreted Context Methodology]] — folder structure as agent architecture; five-layer context loading; stage contracts; one agent replacing multi-agent frameworks (status: developing)
+- [[wiki-query]] — query skill implementing hot cache and compounding answer synthesis (status: seed)
+- [[E-commerce SEO]] — concept for online retail catalog structure and product query optimization (status: seed)
 
 ---
 

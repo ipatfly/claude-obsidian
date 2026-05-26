@@ -119,6 +119,7 @@ Steps:
     - Key insight: One sentence on what is new.
     ```
 11. **Check for contradictions.** If new info conflicts with existing pages, add `> [!contradiction]` callouts on both pages.
+12. **Archive the raw source.** Move the ingested source file from `_raw/` to `_raw/ingested/` (create the directory if missing) to keep the `_raw/` staging folder clean. Record the archived path (e.g. `_raw/ingested/filename.md`) in `_raw/.manifest.json` under `sources`.
 
 ---
 
@@ -181,7 +182,7 @@ Do not silently overwrite old claims. Flag and let the user decide.
 
 ## What Not to Do
 
-- **Source files under `_raw/` are immutable.** Do not modify the files that users drop there (articles, transcripts, images). The `_raw/.manifest.json` delta tracker and its `address_map` (DragonScale Mechanism 2) are the only files under `_raw/` that `wiki-ingest` itself maintains. Treat every other file under `_raw/` as read-only source content.
+- **Source files under `_raw/` are immutable.** Do not modify the content of the files that users drop there (articles, transcripts, images). Once ingestion is complete, however, the files must be moved to `_raw/ingested/` for archiving. The `_raw/.manifest.json` delta tracker and its `address_map` (DragonScale Mechanism 2) are the only files under `_raw/` that `wiki-ingest` itself maintains. Treat every other file under `_raw/` as read-only source content.
 - Do not create duplicate pages. Always check the index and search before creating.
 - Do not skip the log entry. Every ingest must be recorded.
 - Do not skip the hot cache update. It is what keeps future sessions fast.

@@ -3,7 +3,7 @@
   "created": "2026-04-23",
   "description": "Ingest delta tracker and address map for the claude-obsidian vault. Do not hand-edit; wiki-ingest maintains this.",
   "sources": {
-    "_raw/claude-obsidian-ecosystem-research.md": {
+    "_raw/ingested/claude-obsidian-ecosystem-research.md": {
       "hash": "1a5e5c95cbc5bb693119a0334ee066ec",
       "ingested_at": "2026-04-08",
       "gap_filled_at": "2026-05-24",
@@ -22,9 +22,13 @@
         "wiki/entities/jacksteamdev-obsidian-mcp-tools.md",
         "wiki/entities/YuNaga224-obsidian-memory-mcp.md"
       ],
-      "pages_updated": ["wiki/index.md", "wiki/log.md", "wiki/hot.md"]
+      "pages_updated": [
+        "wiki/index.md",
+        "wiki/log.md",
+        "wiki/hot.md"
+      ]
     },
-    "_raw/RinDig Interpreted-Context-Methdology.md": {
+    "_raw/ingested/Interpreted-Context-Methdology.md": {
       "hash": "a01e53fc2446d01437005a07319b8e2f",
       "ingested_at": "2026-05-24",
       "pages_created": [
@@ -32,7 +36,13 @@
         "wiki/concepts/Interpreted Context Methodology.md",
         "wiki/entities/Jake Van Clief.md"
       ],
-      "pages_updated": ["wiki/index.md", "wiki/log.md", "wiki/hot.md", "wiki/entities/_index.md", "wiki/concepts/_index.md"]
+      "pages_updated": [
+        "wiki/index.md",
+        "wiki/log.md",
+        "wiki/hot.md",
+        "wiki/entities/_index.md",
+        "wiki/concepts/_index.md"
+      ]
     }
   },
   "address_map": {
@@ -43,6 +53,11 @@
     "wiki/entities/ekadetov-llm-wiki.md": "c-000006",
     "wiki/entities/heyitsnoah-claudesidian.md": "c-000007",
     "wiki/entities/jacksteamdev-obsidian-mcp-tools.md": "c-000008",
-    "wiki/entities/YuNaga224-obsidian-memory-mcp.md": "c-000009"
+    "wiki/entities/YuNaga224-obsidian-memory-mcp.md": "c-000009",
+    "wiki/concepts/Source-First Synthesis.md": "c-000010",
+    "wiki/concepts/Persistent Wiki Artifact.md": "c-000011",
+    "wiki/concepts/Query-Time Retrieval.md": "c-000012",
+    "wiki/concepts/wiki-query.md": "c-000013",
+    "wiki/concepts/E-commerce SEO.md": "c-000014"
   }
 }

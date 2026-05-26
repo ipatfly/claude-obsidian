@@ -37,12 +37,19 @@ All concept pages — ideas, patterns, and frameworks extracted from sources.
 - [[Persistent Wiki Artifact]]: durable Markdown page as the LLM's memory object (developing)
 - [[Source-First Synthesis]]: provenance discipline for LLM wiki layers (developing)
 - [[Query-Time Retrieval]]: query synthesis with citations, complementary to Obsidian search (developing)
+- [[wiki-query]] — query skill implementing hot cache and compounding answer synthesis (seed)
 
 ---
 
 ## Agent Architecture
 
 - [[Interpreted Context Methodology]] — folder structure as agent architecture; five-layer context loading; stage contracts; one agent replacing multi-agent frameworks (developing)
+
+---
+
+## Marketing / SEO
+
+- [[E-commerce SEO]] — concept for online retail catalog structure and product query optimization (seed)
 
 ---
 

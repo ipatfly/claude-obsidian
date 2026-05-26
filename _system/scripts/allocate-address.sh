@@ -19,7 +19,7 @@
 
 set -euo pipefail
 
-VAULT_ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
+VAULT_ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/../.." && pwd)"
 COUNTER_FILE="${VAULT_ROOT}/.vault-meta/address-counter.txt"
 LOCK_FILE="${VAULT_ROOT}/.vault-meta/.address.lock"
 WIKI_DIR="${VAULT_ROOT}/wiki"
@@ -31,17 +31,28 @@ mkdir -p "$(dirname "$COUNTER_FILE")" || {
   exit 2
 }
 
-# Acquire exclusive lock with 5-second timeout. Release automatically on scope exit.
-# flock is Linux-only; on macOS (single-writer per Phase 2 spec) we skip the lock.
-if command -v flock >/dev/null 2>&1; then
-  exec 9>"$LOCK_FILE"
-  if ! flock -x -w 5 9; then
-    echo "ERR: could not acquire address allocator lock within 5s" >&2
-    exit 1
+LOCK_DIR="${VAULT_ROOT}/.vault-meta/address.lock.dir"
+ACQUIRED=0
+
+# Try to acquire lock over 5 seconds (50 attempts spaced by 100ms)
+for i in {1..50}; do
+  if mkdir "$LOCK_DIR" 2>/dev/null; then
+    ACQUIRED=1
+    break
   fi
-else
-  echo "WARN: flock not available; running without lock (single-writer only)" >&2
+  sleep 0.1
+done
+
+if [ "$ACQUIRED" -ne 1 ]; then
+  echo "ERR: could not acquire address allocator lock within 5s" >&2
+  exit 1
 fi
+
+# Ensure lock is released on exit
+cleanup() {
+  rmdir "$LOCK_DIR" 2>/dev/null
+}
+trap cleanup EXIT
 
 scan_max_c_address() {
   # Emit the largest NNNNNN from "address: c-NNNNNN" lines that appear inside
@@ -56,8 +67,8 @@ scan_max_c_address() {
         FNR == 1 { state = "pre"; next_is_fm = ($0 == "---") ? 1 : 0 }
         FNR == 1 && $0 == "---" { state = "fm"; next }
         state == "fm" && $0 == "---" { state = "body"; nextfile }
-        state == "fm" && match($0, /^address:[[:space:]]+c-[0-9]{6}[[:space:]]*$/) {
-          if (match($0, /c-[0-9]{6}/)) {
+        state == "fm" && match($0, /^address:[ \t]+c-[0-9][0-9][0-9][0-9][0-9][0-9][ \t]*$/) {
+          if (match($0, /c-[0-9][0-9][0-9][0-9][0-9][0-9]/)) {
             print substr($0, RSTART, RLENGTH)
           }
         }
