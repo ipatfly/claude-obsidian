@@ -37,12 +37,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "_raw/2.4 Session Persistence Across Devices - Building Your Stack.md",
+                "file": "wiki/index.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "2.4 Session Persistence Across Devices - Building Your Stack"
+              "title": "index"
             }
           }
         ],
@@ -211,13 +211,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "_raw/2.4 Session Persistence Across Devices - Building Your Stack.md",
+                "file": "wiki/index.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of 2.4 Session Persistence Across Devices - Building Your Stack"
+              "title": "Outline of index"
             }
           }
         ],
@@ -248,31 +248,34 @@
   },
   "active": "daa117e496c99f07",
   "lastOpenFiles": [
-    "_raw/2.3 Mobile Workflow Patterns - Building Your Stack.md",
-    "_raw/2.4 Session Persistence Across Devices - Building Your Stack.md",
-    "_raw/2.2 Setting Up Remote Sessions - Building Your Stack.md",
-    "_raw/2.1 Why Remote Access - Building Your Stack.md",
-    "_raw/1.4 Repo Tour Open Source References - Building Your Stack.md",
-    "_raw/1.3 Designing for Your Use Case - Building Your Stack.md",
-    "_raw/1.2 How I Use Claude Code in the Build Process - Building Your Stack.md",
-    "_raw/1.1 Starting the Build Process - Building Your Stack.md",
-    "_raw/3.3 Pre-Build Planning and Prompt Sequencing - Implementation Playbooks.md",
-    "_raw/3.2 GitHub and Folder Structure - Implementation Playbooks.md",
-    "_raw/3.1  Build and Deploy a Website - Implementation Playbooks.md",
-    "_raw/2.4 Inbox and Scheduling on Autopilot - Implementation Playbooks.md",
-    "_raw/2.3 Teach Claude Your Workflow - Implementation Playbooks.md",
-    "_raw/2.2 Pull Structured Data from Any Page - Implementation Playbooks.md",
-    "_raw/2.1 Setting Up Claude in Chrome (5 Min) - Implementation Playbooks.md",
-    "_raw/Claude Design Folder Structure as a Design System - Implementation Playbooks.md",
-    "_raw/1.3 AI Animation Workflow Course Companion - Implementation Playbooks.md",
-    "_raw/1.2 Turn Illustrator Designs into Web Animations - Implementation Playbooks.md",
-    "_raw/1.1 Building Animations with Claude Code - Implementation Playbooks.md",
-    "wiki/sources/rindig-interpreted-context-methodology.md",
-    "resources/docs/releases/v1.6.0.md",
+    "wiki/concepts/Claude Desktop.md",
+    "_raw/ingested/Claude Design Folder Structure as a Design System - Implementation Playbooks.md",
+    "_raw/ingested/5.1 Your Path From Here - The Foundation.md",
+    "_raw/ingested/4.5 Where This Goes - The Foundation.md",
+    "_raw/ingested/4.4 Making Claude Understand Your Project - The Foundation.md",
+    "_raw/ingested/4.3 Claude Desktop as a Thinking Partner - The Foundation.md",
+    "_raw/ingested/4.2 Claude Code in Practice - The Foundation.md",
+    "_raw/ingested/4.1 Install and First Use - The Foundation.md",
+    "_raw/ingested/3.3 Pre-Build Planning and Prompt Sequencing - Implementation Playbooks.md",
+    "_raw/ingested/3.3 Common Mistakes and How to Fix Them - The Foundation.md",
+    "_raw/ingested/3.2 GitHub and Folder Structure - Implementation Playbooks.md",
+    "_raw/ingested/3.2 Customizing for Your Use Case - The Foundation.md",
+    "_raw/ingested/3.1 The Full Walkthrough (23 Min Video) - The Foundation.md",
+    "_raw/ingested/3.1  Build and Deploy a Website - Implementation Playbooks.md",
+    "_raw/ingested/2.4 Session Persistence Across Devices - Building Your Stack.md",
+    "_raw/ingested/2.4 Inbox and Scheduling on Autopilot - Implementation Playbooks.md",
+    "_raw/ingested/2.3 Teach Claude Your Workflow - Implementation Playbooks.md",
+    "_raw/ingested/2.3 Mobile Workflow Patterns - Building Your Stack.md",
+    "_raw/ingested/2.2 Setting Up Remote Sessions - Building Your Stack.md",
+    "_raw/ingested/2.2 Pull Structured Data from Any Page - Implementation Playbooks.md",
+    "_raw/ingested/2.1 Why Remote Access - Building Your Stack.md",
+    "_raw/ingested/2.1 Setting Up Claude in Chrome (5 Min) - Implementation Playbooks.md",
+    "_raw/ingested/1.4 Repo Tour Open Source References - Building Your Stack.md",
+    "_raw/ingested/1.3 How to Structure Any Prompt - The Foundation.md",
+    "_raw/ingested/1.3 Designing for Your Use Case - Building Your Stack.md",
+    "_raw/ingested/1.3 AI Animation Workflow Course Companion - Implementation Playbooks.md",
     "resources/docs/releases",
     "resources/docs/install-guide.pdf",
-    "resources/docs/install-guide.md",
-    "resources/docs/dragonscale-guide.md",
     "resources/docs",
     "_system/tests/test_tiling_check.py",
     "_system/tests/test_boundary_score.py",
@@ -281,9 +284,6 @@
     "_system/scripts/tiling-check.py",
     "_system/scripts/boundary-score.py",
     "_system/scripts/allocate-address.sh",
-    "resources/agents/wiki-lint.md",
-    "resources/agents/wiki-ingest.md",
-    "resources/hooks/README.md",
     "wiki/Wiki Map.canvas"
   ]
 }

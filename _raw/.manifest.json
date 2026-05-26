@@ -43,6 +43,696 @@
         "wiki/entities/_index.md",
         "wiki/concepts/_index.md"
       ]
+    },
+    "_raw/ingested/1.2 Your First Folder - The Foundation.md": {
+      "hash": "20fbff6785ee6967a01959151215171f",
+      "ingested_at": "2026-05-26",
+      "pages_created": [
+        "wiki/sources/The Foundation.md",
+        "wiki/sources/Building Your Stack.md",
+        "wiki/sources/Implementation Playbooks.md",
+        "wiki/concepts/Cliefnotes Academy.md",
+        "wiki/concepts/Tool Ladder.md",
+        "wiki/concepts/Product Requirements Document.md",
+        "wiki/concepts/Prompt Engineering.md",
+        "wiki/concepts/Claude Code.md",
+        "wiki/concepts/Remote Sessions.md",
+        "wiki/concepts/Web Animations.md",
+        "wiki/concepts/AI Inbox Automation.md"
+      ],
+      "pages_updated": [
+        "wiki/index.md",
+        "wiki/log.md",
+        "wiki/hot.md",
+        "wiki/concepts/_index.md"
+      ]
+    },
+    "_raw/ingested/1.3 How to Structure Any Prompt - The Foundation.md": {
+      "hash": "8f91ab9f672c5eef512e75f1aec99f48",
+      "ingested_at": "2026-05-26",
+      "pages_created": [
+        "wiki/sources/The Foundation.md",
+        "wiki/sources/Building Your Stack.md",
+        "wiki/sources/Implementation Playbooks.md",
+        "wiki/concepts/Cliefnotes Academy.md",
+        "wiki/concepts/Tool Ladder.md",
+        "wiki/concepts/Product Requirements Document.md",
+        "wiki/concepts/Prompt Engineering.md",
+        "wiki/concepts/Claude Code.md",
+        "wiki/concepts/Remote Sessions.md",
+        "wiki/concepts/Web Animations.md",
+        "wiki/concepts/AI Inbox Automation.md"
+      ],
+      "pages_updated": [
+        "wiki/index.md",
+        "wiki/log.md",
+        "wiki/hot.md",
+        "wiki/concepts/_index.md"
+      ]
+    },
+    "_raw/ingested/3.1 The Full Walkthrough (23 Min Video) - The Foundation.md": {
+      "hash": "82da349c6858783d1cd9de4c8294c806",
+      "ingested_at": "2026-05-26",
+      "pages_created": [
+        "wiki/sources/The Foundation.md",
+        "wiki/sources/Building Your Stack.md",
+        "wiki/sources/Implementation Playbooks.md",
+        "wiki/concepts/Cliefnotes Academy.md",
+        "wiki/concepts/Tool Ladder.md",
+        "wiki/concepts/Product Requirements Document.md",
+        "wiki/concepts/Prompt Engineering.md",
+        "wiki/concepts/Claude Code.md",
+        "wiki/concepts/Remote Sessions.md",
+        "wiki/concepts/Web Animations.md",
+        "wiki/concepts/AI Inbox Automation.md"
+      ],
+      "pages_updated": [
+        "wiki/index.md",
+        "wiki/log.md",
+        "wiki/hot.md",
+        "wiki/concepts/_index.md"
+      ]
+    },
+    "_raw/ingested/3.2 Customizing for Your Use Case - The Foundation.md": {
+      "hash": "5459acffbf46b100f49fa3f22d78f278",
+      "ingested_at": "2026-05-26",
+      "pages_created": [
+        "wiki/sources/The Foundation.md",
+        "wiki/sources/Building Your Stack.md",
+        "wiki/sources/Implementation Playbooks.md",
+        "wiki/concepts/Cliefnotes Academy.md",
+        "wiki/concepts/Tool Ladder.md",
+        "wiki/concepts/Product Requirements Document.md",
+        "wiki/concepts/Prompt Engineering.md",
+        "wiki/concepts/Claude Code.md",
+        "wiki/concepts/Remote Sessions.md",
+        "wiki/concepts/Web Animations.md",
+        "wiki/concepts/AI Inbox Automation.md"
+      ],
+      "pages_updated": [
+        "wiki/index.md",
+        "wiki/log.md",
+        "wiki/hot.md",
+        "wiki/concepts/_index.md"
+      ]
+    },
+    "_raw/ingested/3.3 Common Mistakes and How to Fix Them - The Foundation.md": {
+      "hash": "b8bbca2e58b858ad39ef57b2a1c74dcd",
+      "ingested_at": "2026-05-26",
+      "pages_created": [
+        "wiki/sources/The Foundation.md",
+        "wiki/sources/Building Your Stack.md",
+        "wiki/sources/Implementation Playbooks.md",
+        "wiki/concepts/Cliefnotes Academy.md",
+        "wiki/concepts/Tool Ladder.md",
+        "wiki/concepts/Product Requirements Document.md",
+        "wiki/concepts/Prompt Engineering.md",
+        "wiki/concepts/Claude Code.md",
+        "wiki/concepts/Remote Sessions.md",
+        "wiki/concepts/Web Animations.md",
+        "wiki/concepts/AI Inbox Automation.md"
+      ],
+      "pages_updated": [
+        "wiki/index.md",
+        "wiki/log.md",
+        "wiki/hot.md",
+        "wiki/concepts/_index.md"
+      ]
+    },
+    "_raw/ingested/4.1 Install and First Use - The Foundation.md": {
+      "hash": "70dba936946fb9b149f795b273cdd599",
+      "ingested_at": "2026-05-26",
+      "pages_created": [
+        "wiki/sources/The Foundation.md",
+        "wiki/sources/Building Your Stack.md",
+        "wiki/sources/Implementation Playbooks.md",
+        "wiki/concepts/Cliefnotes Academy.md",
+        "wiki/concepts/Tool Ladder.md",
+        "wiki/concepts/Product Requirements Document.md",
+        "wiki/concepts/Prompt Engineering.md",
+        "wiki/concepts/Claude Code.md",
+        "wiki/concepts/Remote Sessions.md",
+        "wiki/concepts/Web Animations.md",
+        "wiki/concepts/AI Inbox Automation.md"
+      ],
+      "pages_updated": [
+        "wiki/index.md",
+        "wiki/log.md",
+        "wiki/hot.md",
+        "wiki/concepts/_index.md"
+      ]
+    },
+    "_raw/ingested/4.2 Claude Code in Practice - The Foundation.md": {
+      "hash": "346dc717be0e7c85da872dc854682b73",
+      "ingested_at": "2026-05-26",
+      "pages_created": [
+        "wiki/sources/The Foundation.md",
+        "wiki/sources/Building Your Stack.md",
+        "wiki/sources/Implementation Playbooks.md",
+        "wiki/concepts/Cliefnotes Academy.md",
+        "wiki/concepts/Tool Ladder.md",
+        "wiki/concepts/Product Requirements Document.md",
+        "wiki/concepts/Prompt Engineering.md",
+        "wiki/concepts/Claude Code.md",
+        "wiki/concepts/Remote Sessions.md",
+        "wiki/concepts/Web Animations.md",
+        "wiki/concepts/AI Inbox Automation.md"
+      ],
+      "pages_updated": [
+        "wiki/index.md",
+        "wiki/log.md",
+        "wiki/hot.md",
+        "wiki/concepts/_index.md"
+      ]
+    },
+    "_raw/ingested/4.3 Claude Desktop as a Thinking Partner - The Foundation.md": {
+      "hash": "7c922ed542c930ffd6ee6cd5bb3ed720",
+      "ingested_at": "2026-05-26",
+      "pages_created": [
+        "wiki/sources/The Foundation.md",
+        "wiki/sources/Building Your Stack.md",
+        "wiki/sources/Implementation Playbooks.md",
+        "wiki/concepts/Cliefnotes Academy.md",
+        "wiki/concepts/Tool Ladder.md",
+        "wiki/concepts/Product Requirements Document.md",
+        "wiki/concepts/Prompt Engineering.md",
+        "wiki/concepts/Claude Code.md",
+        "wiki/concepts/Remote Sessions.md",
+        "wiki/concepts/Web Animations.md",
+        "wiki/concepts/AI Inbox Automation.md"
+      ],
+      "pages_updated": [
+        "wiki/index.md",
+        "wiki/log.md",
+        "wiki/hot.md",
+        "wiki/concepts/_index.md"
+      ]
+    },
+    "_raw/ingested/4.4 Making Claude Understand Your Project - The Foundation.md": {
+      "hash": "780d3d88bb26f0241d82072cc31aa2aa",
+      "ingested_at": "2026-05-26",
+      "pages_created": [
+        "wiki/sources/The Foundation.md",
+        "wiki/sources/Building Your Stack.md",
+        "wiki/sources/Implementation Playbooks.md",
+        "wiki/concepts/Cliefnotes Academy.md",
+        "wiki/concepts/Tool Ladder.md",
+        "wiki/concepts/Product Requirements Document.md",
+        "wiki/concepts/Prompt Engineering.md",
+        "wiki/concepts/Claude Code.md",
+        "wiki/concepts/Remote Sessions.md",
+        "wiki/concepts/Web Animations.md",
+        "wiki/concepts/AI Inbox Automation.md"
+      ],
+      "pages_updated": [
+        "wiki/index.md",
+        "wiki/log.md",
+        "wiki/hot.md",
+        "wiki/concepts/_index.md"
+      ]
+    },
+    "_raw/ingested/4.5 Where This Goes - The Foundation.md": {
+      "hash": "13c24ce1831a0da5d490f96705ee9a89",
+      "ingested_at": "2026-05-26",
+      "pages_created": [
+        "wiki/sources/The Foundation.md",
+        "wiki/sources/Building Your Stack.md",
+        "wiki/sources/Implementation Playbooks.md",
+        "wiki/concepts/Cliefnotes Academy.md",
+        "wiki/concepts/Tool Ladder.md",
+        "wiki/concepts/Product Requirements Document.md",
+        "wiki/concepts/Prompt Engineering.md",
+        "wiki/concepts/Claude Code.md",
+        "wiki/concepts/Remote Sessions.md",
+        "wiki/concepts/Web Animations.md",
+        "wiki/concepts/AI Inbox Automation.md"
+      ],
+      "pages_updated": [
+        "wiki/index.md",
+        "wiki/log.md",
+        "wiki/hot.md",
+        "wiki/concepts/_index.md"
+      ]
+    },
+    "_raw/ingested/5.1 Your Path From Here - The Foundation.md": {
+      "hash": "e0156a30ead80ed4a552b79db5ed2b17",
+      "ingested_at": "2026-05-26",
+      "pages_created": [
+        "wiki/sources/The Foundation.md",
+        "wiki/sources/Building Your Stack.md",
+        "wiki/sources/Implementation Playbooks.md",
+        "wiki/concepts/Cliefnotes Academy.md",
+        "wiki/concepts/Tool Ladder.md",
+        "wiki/concepts/Product Requirements Document.md",
+        "wiki/concepts/Prompt Engineering.md",
+        "wiki/concepts/Claude Code.md",
+        "wiki/concepts/Remote Sessions.md",
+        "wiki/concepts/Web Animations.md",
+        "wiki/concepts/AI Inbox Automation.md"
+      ],
+      "pages_updated": [
+        "wiki/index.md",
+        "wiki/log.md",
+        "wiki/hot.md",
+        "wiki/concepts/_index.md"
+      ]
+    },
+    "_raw/ingested/1.1 Starting the Build Process - Building Your Stack.md": {
+      "hash": "2c6970c6e2bad730024fe8496db3c8c9",
+      "ingested_at": "2026-05-26",
+      "pages_created": [
+        "wiki/sources/The Foundation.md",
+        "wiki/sources/Building Your Stack.md",
+        "wiki/sources/Implementation Playbooks.md",
+        "wiki/concepts/Cliefnotes Academy.md",
+        "wiki/concepts/Tool Ladder.md",
+        "wiki/concepts/Product Requirements Document.md",
+        "wiki/concepts/Prompt Engineering.md",
+        "wiki/concepts/Claude Code.md",
+        "wiki/concepts/Remote Sessions.md",
+        "wiki/concepts/Web Animations.md",
+        "wiki/concepts/AI Inbox Automation.md"
+      ],
+      "pages_updated": [
+        "wiki/index.md",
+        "wiki/log.md",
+        "wiki/hot.md",
+        "wiki/concepts/_index.md"
+      ]
+    },
+    "_raw/ingested/1.2 How I Use Claude Code in the Build Process - Building Your Stack.md": {
+      "hash": "a3542a42bae1a0dc285a4cf4643ae9e8",
+      "ingested_at": "2026-05-26",
+      "pages_created": [
+        "wiki/sources/The Foundation.md",
+        "wiki/sources/Building Your Stack.md",
+        "wiki/sources/Implementation Playbooks.md",
+        "wiki/concepts/Cliefnotes Academy.md",
+        "wiki/concepts/Tool Ladder.md",
+        "wiki/concepts/Product Requirements Document.md",
+        "wiki/concepts/Prompt Engineering.md",
+        "wiki/concepts/Claude Code.md",
+        "wiki/concepts/Remote Sessions.md",
+        "wiki/concepts/Web Animations.md",
+        "wiki/concepts/AI Inbox Automation.md"
+      ],
+      "pages_updated": [
+        "wiki/index.md",
+        "wiki/log.md",
+        "wiki/hot.md",
+        "wiki/concepts/_index.md"
+      ]
+    },
+    "_raw/ingested/1.3 Designing for Your Use Case - Building Your Stack.md": {
+      "hash": "aa86022cf0800c900e2ea25f560b8744",
+      "ingested_at": "2026-05-26",
+      "pages_created": [
+        "wiki/sources/The Foundation.md",
+        "wiki/sources/Building Your Stack.md",
+        "wiki/sources/Implementation Playbooks.md",
+        "wiki/concepts/Cliefnotes Academy.md",
+        "wiki/concepts/Tool Ladder.md",
+        "wiki/concepts/Product Requirements Document.md",
+        "wiki/concepts/Prompt Engineering.md",
+        "wiki/concepts/Claude Code.md",
+        "wiki/concepts/Remote Sessions.md",
+        "wiki/concepts/Web Animations.md",
+        "wiki/concepts/AI Inbox Automation.md"
+      ],
+      "pages_updated": [
+        "wiki/index.md",
+        "wiki/log.md",
+        "wiki/hot.md",
+        "wiki/concepts/_index.md"
+      ]
+    },
+    "_raw/ingested/1.4 Repo Tour Open Source References - Building Your Stack.md": {
+      "hash": "52d896a3554e1cf6826b81ee81dfc3a3",
+      "ingested_at": "2026-05-26",
+      "pages_created": [
+        "wiki/sources/The Foundation.md",
+        "wiki/sources/Building Your Stack.md",
+        "wiki/sources/Implementation Playbooks.md",
+        "wiki/concepts/Cliefnotes Academy.md",
+        "wiki/concepts/Tool Ladder.md",
+        "wiki/concepts/Product Requirements Document.md",
+        "wiki/concepts/Prompt Engineering.md",
+        "wiki/concepts/Claude Code.md",
+        "wiki/concepts/Remote Sessions.md",
+        "wiki/concepts/Web Animations.md",
+        "wiki/concepts/AI Inbox Automation.md"
+      ],
+      "pages_updated": [
+        "wiki/index.md",
+        "wiki/log.md",
+        "wiki/hot.md",
+        "wiki/concepts/_index.md"
+      ]
+    },
+    "_raw/ingested/2.1 Why Remote Access - Building Your Stack.md": {
+      "hash": "31f19f677f3c2936db9ab1dd5561e55c",
+      "ingested_at": "2026-05-26",
+      "pages_created": [
+        "wiki/sources/The Foundation.md",
+        "wiki/sources/Building Your Stack.md",
+        "wiki/sources/Implementation Playbooks.md",
+        "wiki/concepts/Cliefnotes Academy.md",
+        "wiki/concepts/Tool Ladder.md",
+        "wiki/concepts/Product Requirements Document.md",
+        "wiki/concepts/Prompt Engineering.md",
+        "wiki/concepts/Claude Code.md",
+        "wiki/concepts/Remote Sessions.md",
+        "wiki/concepts/Web Animations.md",
+        "wiki/concepts/AI Inbox Automation.md"
+      ],
+      "pages_updated": [
+        "wiki/index.md",
+        "wiki/log.md",
+        "wiki/hot.md",
+        "wiki/concepts/_index.md"
+      ]
+    },
+    "_raw/ingested/2.2 Setting Up Remote Sessions - Building Your Stack.md": {
+      "hash": "8503d193ff1b10e3dbcbb1deb1b471cb",
+      "ingested_at": "2026-05-26",
+      "pages_created": [
+        "wiki/sources/The Foundation.md",
+        "wiki/sources/Building Your Stack.md",
+        "wiki/sources/Implementation Playbooks.md",
+        "wiki/concepts/Cliefnotes Academy.md",
+        "wiki/concepts/Tool Ladder.md",
+        "wiki/concepts/Product Requirements Document.md",
+        "wiki/concepts/Prompt Engineering.md",
+        "wiki/concepts/Claude Code.md",
+        "wiki/concepts/Remote Sessions.md",
+        "wiki/concepts/Web Animations.md",
+        "wiki/concepts/AI Inbox Automation.md"
+      ],
+      "pages_updated": [
+        "wiki/index.md",
+        "wiki/log.md",
+        "wiki/hot.md",
+        "wiki/concepts/_index.md"
+      ]
+    },
+    "_raw/ingested/2.3 Mobile Workflow Patterns - Building Your Stack.md": {
+      "hash": "b343786ad9cd2a70fcdf04d15eae009a",
+      "ingested_at": "2026-05-26",
+      "pages_created": [
+        "wiki/sources/The Foundation.md",
+        "wiki/sources/Building Your Stack.md",
+        "wiki/sources/Implementation Playbooks.md",
+        "wiki/concepts/Cliefnotes Academy.md",
+        "wiki/concepts/Tool Ladder.md",
+        "wiki/concepts/Product Requirements Document.md",
+        "wiki/concepts/Prompt Engineering.md",
+        "wiki/concepts/Claude Code.md",
+        "wiki/concepts/Remote Sessions.md",
+        "wiki/concepts/Web Animations.md",
+        "wiki/concepts/AI Inbox Automation.md"
+      ],
+      "pages_updated": [
+        "wiki/index.md",
+        "wiki/log.md",
+        "wiki/hot.md",
+        "wiki/concepts/_index.md"
+      ]
+    },
+    "_raw/ingested/2.4 Session Persistence Across Devices - Building Your Stack.md": {
+      "hash": "583fd2c9b4f93ff3f77b055551a746a1",
+      "ingested_at": "2026-05-26",
+      "pages_created": [
+        "wiki/sources/The Foundation.md",
+        "wiki/sources/Building Your Stack.md",
+        "wiki/sources/Implementation Playbooks.md",
+        "wiki/concepts/Cliefnotes Academy.md",
+        "wiki/concepts/Tool Ladder.md",
+        "wiki/concepts/Product Requirements Document.md",
+        "wiki/concepts/Prompt Engineering.md",
+        "wiki/concepts/Claude Code.md",
+        "wiki/concepts/Remote Sessions.md",
+        "wiki/concepts/Web Animations.md",
+        "wiki/concepts/AI Inbox Automation.md"
+      ],
+      "pages_updated": [
+        "wiki/index.md",
+        "wiki/log.md",
+        "wiki/hot.md",
+        "wiki/concepts/_index.md"
+      ]
+    },
+    "_raw/ingested/1.1 Building Animations with Claude Code - Implementation Playbooks.md": {
+      "hash": "ca019e6a591cf466f4ac8318be3e20d9",
+      "ingested_at": "2026-05-26",
+      "pages_created": [
+        "wiki/sources/The Foundation.md",
+        "wiki/sources/Building Your Stack.md",
+        "wiki/sources/Implementation Playbooks.md",
+        "wiki/concepts/Cliefnotes Academy.md",
+        "wiki/concepts/Tool Ladder.md",
+        "wiki/concepts/Product Requirements Document.md",
+        "wiki/concepts/Prompt Engineering.md",
+        "wiki/concepts/Claude Code.md",
+        "wiki/concepts/Remote Sessions.md",
+        "wiki/concepts/Web Animations.md",
+        "wiki/concepts/AI Inbox Automation.md"
+      ],
+      "pages_updated": [
+        "wiki/index.md",
+        "wiki/log.md",
+        "wiki/hot.md",
+        "wiki/concepts/_index.md"
+      ]
+    },
+    "_raw/ingested/1.2 Turn Illustrator Designs into Web Animations - Implementation Playbooks.md": {
+      "hash": "ec5c54c29ce9e1ff7b06bbec9aa8a3bb",
+      "ingested_at": "2026-05-26",
+      "pages_created": [
+        "wiki/sources/The Foundation.md",
+        "wiki/sources/Building Your Stack.md",
+        "wiki/sources/Implementation Playbooks.md",
+        "wiki/concepts/Cliefnotes Academy.md",
+        "wiki/concepts/Tool Ladder.md",
+        "wiki/concepts/Product Requirements Document.md",
+        "wiki/concepts/Prompt Engineering.md",
+        "wiki/concepts/Claude Code.md",
+        "wiki/concepts/Remote Sessions.md",
+        "wiki/concepts/Web Animations.md",
+        "wiki/concepts/AI Inbox Automation.md"
+      ],
+      "pages_updated": [
+        "wiki/index.md",
+        "wiki/log.md",
+        "wiki/hot.md",
+        "wiki/concepts/_index.md"
+      ]
+    },
+    "_raw/ingested/1.3 AI Animation Workflow Course Companion - Implementation Playbooks.md": {
+      "hash": "b1487c6fb2c87a9c1a2aba6f04e15d81",
+      "ingested_at": "2026-05-26",
+      "pages_created": [
+        "wiki/sources/The Foundation.md",
+        "wiki/sources/Building Your Stack.md",
+        "wiki/sources/Implementation Playbooks.md",
+        "wiki/concepts/Cliefnotes Academy.md",
+        "wiki/concepts/Tool Ladder.md",
+        "wiki/concepts/Product Requirements Document.md",
+        "wiki/concepts/Prompt Engineering.md",
+        "wiki/concepts/Claude Code.md",
+        "wiki/concepts/Remote Sessions.md",
+        "wiki/concepts/Web Animations.md",
+        "wiki/concepts/AI Inbox Automation.md"
+      ],
+      "pages_updated": [
+        "wiki/index.md",
+        "wiki/log.md",
+        "wiki/hot.md",
+        "wiki/concepts/_index.md"
+      ]
+    },
+    "_raw/ingested/2.1 Setting Up Claude in Chrome (5 Min) - Implementation Playbooks.md": {
+      "hash": "3c0d8be4d3ad6ed887d616bb06ee9bf4",
+      "ingested_at": "2026-05-26",
+      "pages_created": [
+        "wiki/sources/The Foundation.md",
+        "wiki/sources/Building Your Stack.md",
+        "wiki/sources/Implementation Playbooks.md",
+        "wiki/concepts/Cliefnotes Academy.md",
+        "wiki/concepts/Tool Ladder.md",
+        "wiki/concepts/Product Requirements Document.md",
+        "wiki/concepts/Prompt Engineering.md",
+        "wiki/concepts/Claude Code.md",
+        "wiki/concepts/Remote Sessions.md",
+        "wiki/concepts/Web Animations.md",
+        "wiki/concepts/AI Inbox Automation.md"
+      ],
+      "pages_updated": [
+        "wiki/index.md",
+        "wiki/log.md",
+        "wiki/hot.md",
+        "wiki/concepts/_index.md"
+      ]
+    },
+    "_raw/ingested/2.2 Pull Structured Data from Any Page - Implementation Playbooks.md": {
+      "hash": "08deeea8b9f7c5a23c6f0c398c7e67fe",
+      "ingested_at": "2026-05-26",
+      "pages_created": [
+        "wiki/sources/The Foundation.md",
+        "wiki/sources/Building Your Stack.md",
+        "wiki/sources/Implementation Playbooks.md",
+        "wiki/concepts/Cliefnotes Academy.md",
+        "wiki/concepts/Tool Ladder.md",
+        "wiki/concepts/Product Requirements Document.md",
+        "wiki/concepts/Prompt Engineering.md",
+        "wiki/concepts/Claude Code.md",
+        "wiki/concepts/Remote Sessions.md",
+        "wiki/concepts/Web Animations.md",
+        "wiki/concepts/AI Inbox Automation.md"
+      ],
+      "pages_updated": [
+        "wiki/index.md",
+        "wiki/log.md",
+        "wiki/hot.md",
+        "wiki/concepts/_index.md"
+      ]
+    },
+    "_raw/ingested/2.3 Teach Claude Your Workflow - Implementation Playbooks.md": {
+      "hash": "88a4e2e682eca8e903b71c2bd3c6c857",
+      "ingested_at": "2026-05-26",
+      "pages_created": [
+        "wiki/sources/The Foundation.md",
+        "wiki/sources/Building Your Stack.md",
+        "wiki/sources/Implementation Playbooks.md",
+        "wiki/concepts/Cliefnotes Academy.md",
+        "wiki/concepts/Tool Ladder.md",
+        "wiki/concepts/Product Requirements Document.md",
+        "wiki/concepts/Prompt Engineering.md",
+        "wiki/concepts/Claude Code.md",
+        "wiki/concepts/Remote Sessions.md",
+        "wiki/concepts/Web Animations.md",
+        "wiki/concepts/AI Inbox Automation.md"
+      ],
+      "pages_updated": [
+        "wiki/index.md",
+        "wiki/log.md",
+        "wiki/hot.md",
+        "wiki/concepts/_index.md"
+      ]
+    },
+    "_raw/ingested/2.4 Inbox and Scheduling on Autopilot - Implementation Playbooks.md": {
+      "hash": "051f750fb9cbed1c1f50cc2152f51cd9",
+      "ingested_at": "2026-05-26",
+      "pages_created": [
+        "wiki/sources/The Foundation.md",
+        "wiki/sources/Building Your Stack.md",
+        "wiki/sources/Implementation Playbooks.md",
+        "wiki/concepts/Cliefnotes Academy.md",
+        "wiki/concepts/Tool Ladder.md",
+        "wiki/concepts/Product Requirements Document.md",
+        "wiki/concepts/Prompt Engineering.md",
+        "wiki/concepts/Claude Code.md",
+        "wiki/concepts/Remote Sessions.md",
+        "wiki/concepts/Web Animations.md",
+        "wiki/concepts/AI Inbox Automation.md"
+      ],
+      "pages_updated": [
+        "wiki/index.md",
+        "wiki/log.md",
+        "wiki/hot.md",
+        "wiki/concepts/_index.md"
+      ]
+    },
+    "_raw/ingested/3.1  Build and Deploy a Website - Implementation Playbooks.md": {
+      "hash": "e5f679593daada47b58cb4aaaea8c6a9",
+      "ingested_at": "2026-05-26",
+      "pages_created": [
+        "wiki/sources/The Foundation.md",
+        "wiki/sources/Building Your Stack.md",
+        "wiki/sources/Implementation Playbooks.md",
+        "wiki/concepts/Cliefnotes Academy.md",
+        "wiki/concepts/Tool Ladder.md",
+        "wiki/concepts/Product Requirements Document.md",
+        "wiki/concepts/Prompt Engineering.md",
+        "wiki/concepts/Claude Code.md",
+        "wiki/concepts/Remote Sessions.md",
+        "wiki/concepts/Web Animations.md",
+        "wiki/concepts/AI Inbox Automation.md"
+      ],
+      "pages_updated": [
+        "wiki/index.md",
+        "wiki/log.md",
+        "wiki/hot.md",
+        "wiki/concepts/_index.md"
+      ]
+    },
+    "_raw/ingested/3.2 GitHub and Folder Structure - Implementation Playbooks.md": {
+      "hash": "246c7659fa2f6070df4a27a21fee572c",
+      "ingested_at": "2026-05-26",
+      "pages_created": [
+        "wiki/sources/The Foundation.md",
+        "wiki/sources/Building Your Stack.md",
+        "wiki/sources/Implementation Playbooks.md",
+        "wiki/concepts/Cliefnotes Academy.md",
+        "wiki/concepts/Tool Ladder.md",
+        "wiki/concepts/Product Requirements Document.md",
+        "wiki/concepts/Prompt Engineering.md",
+        "wiki/concepts/Claude Code.md",
+        "wiki/concepts/Remote Sessions.md",
+        "wiki/concepts/Web Animations.md",
+        "wiki/concepts/AI Inbox Automation.md"
+      ],
+      "pages_updated": [
+        "wiki/index.md",
+        "wiki/log.md",
+        "wiki/hot.md",
+        "wiki/concepts/_index.md"
+      ]
+    },
+    "_raw/ingested/3.3 Pre-Build Planning and Prompt Sequencing - Implementation Playbooks.md": {
+      "hash": "79a4a36cf0cdadcb6cae021ecfce9072",
+      "ingested_at": "2026-05-26",
+      "pages_created": [
+        "wiki/sources/The Foundation.md",
+        "wiki/sources/Building Your Stack.md",
+        "wiki/sources/Implementation Playbooks.md",
+        "wiki/concepts/Cliefnotes Academy.md",
+        "wiki/concepts/Tool Ladder.md",
+        "wiki/concepts/Product Requirements Document.md",
+        "wiki/concepts/Prompt Engineering.md",
+        "wiki/concepts/Claude Code.md",
+        "wiki/concepts/Remote Sessions.md",
+        "wiki/concepts/Web Animations.md",
+        "wiki/concepts/AI Inbox Automation.md"
+      ],
+      "pages_updated": [
+        "wiki/index.md",
+        "wiki/log.md",
+        "wiki/hot.md",
+        "wiki/concepts/_index.md"
+      ]
+    },
+    "_raw/ingested/Claude Design Folder Structure as a Design System - Implementation Playbooks.md": {
+      "hash": "40456a172c8e87f0e465b2999b2d5155",
+      "ingested_at": "2026-05-26",
+      "pages_created": [
+        "wiki/sources/The Foundation.md",
+        "wiki/sources/Building Your Stack.md",
+        "wiki/sources/Implementation Playbooks.md",
+        "wiki/concepts/Cliefnotes Academy.md",
+        "wiki/concepts/Tool Ladder.md",
+        "wiki/concepts/Product Requirements Document.md",
+        "wiki/concepts/Prompt Engineering.md",
+        "wiki/concepts/Claude Code.md",
+        "wiki/concepts/Remote Sessions.md",
+        "wiki/concepts/Web Animations.md",
+        "wiki/concepts/AI Inbox Automation.md"
+      ],
+      "pages_updated": [
+        "wiki/index.md",
+        "wiki/log.md",
+        "wiki/hot.md",
+        "wiki/concepts/_index.md"
+      ]
     }
   },
   "address_map": {
@@ -58,6 +748,18 @@
     "wiki/concepts/Persistent Wiki Artifact.md": "c-000011",
     "wiki/concepts/Query-Time Retrieval.md": "c-000012",
     "wiki/concepts/wiki-query.md": "c-000013",
-    "wiki/concepts/E-commerce SEO.md": "c-000014"
+    "wiki/concepts/E-commerce SEO.md": "c-000014",
+    "wiki/sources/The Foundation.md": "c-000015",
+    "wiki/sources/Building Your Stack.md": "c-000016",
+    "wiki/sources/Implementation Playbooks.md": "c-000017",
+    "wiki/concepts/Cliefnotes Academy.md": "c-000018",
+    "wiki/concepts/Tool Ladder.md": "c-000019",
+    "wiki/concepts/Product Requirements Document.md": "c-000020",
+    "wiki/concepts/Prompt Engineering.md": "c-000021",
+    "wiki/concepts/Claude Code.md": "c-000022",
+    "wiki/concepts/Remote Sessions.md": "c-000023",
+    "wiki/concepts/Web Animations.md": "c-000024",
+    "wiki/concepts/AI Inbox Automation.md": "c-000025",
+    "wiki/concepts/Claude Desktop.md": "c-000026"
   }
 }

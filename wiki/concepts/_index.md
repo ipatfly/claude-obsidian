@@ -30,6 +30,13 @@ All concept pages — ideas, patterns, and frameworks extracted from sources.
 
 ## Knowledge Management
 
+- [[Cliefnotes Academy]] — central training curriculum for AI agent system architectures and workspace setups
+- [[Tool Ladder]] — 4-level scoping framework for selecting the simplest necessary tool architecture
+- [[Product Requirements Document]] — structured Markdown specification acting as stateful agent build context
+- [[Prompt Engineering]] — four-pillar prompt structure (Role, Context, Task, Format) and sequencing rules
+- [[Claude Code]] — official Anthropic terminal-based coding agent and interactive plan execution
+- [[Claude Desktop]] — Anthropic's official desktop application wrapper, serving as a Thinking Partner in ICM
+- [[Remote Sessions]] — cross-device persistence and mobile workflow setups using terminal multiplexers
 - [[LLM Wiki Pattern]] — the core architecture for persistent, compounding knowledge bases
 - [[Hot Cache]] — ~500-word session context file, updated after every ingest
 - [[Compounding Knowledge]] — why the wiki grows more valuable over time, unlike RAG
@@ -49,6 +56,8 @@ All concept pages — ideas, patterns, and frameworks extracted from sources.
 
 ## Marketing / SEO
 
+- [[Web Animations]] — workflow for translating Illustrator assets into React/Remotion keyframes via Claude Code
+- [[AI Inbox Automation]] — Low-code n8n backend polling, sorting, and scheduling automated research cronjobs
 - [[E-commerce SEO]] — concept for online retail catalog structure and product query optimization (seed)
 
 ---

@@ -10,15 +10,15 @@ status: developing
 # Lint Report: 2026-05-26
 
 ## Summary
-- Pages scanned: 53
-- Issues found: 74 (0 critical, 28 warnings, 46 suggestions)
+- Pages scanned: 65
+- Issues found: 89 (0 critical, 34 warnings, 55 suggestions)
 - Auto-fixed: 0
-- Needs review: 74
+- Needs review: 89
 
 ## Address Validation
-- Counter state: `15`
-- Highest c- address observed: c-000014
-- Post-rollout pages checked: 13 (13 passing, 0 errors)
+- Counter state: `27`
+- Highest c- address observed: c-000026
+- Post-rollout pages checked: 25 (25 passing, 0 errors)
 - Legacy pages pending backfill: 21
 
 ### Errors
@@ -59,6 +59,7 @@ See [[tiling-report-2026-05-26]] for the full pair listing.
 
 ## Warnings (should fix)
 - [[Wiki vs RAG]]: Empty section: `# Wiki vs RAG`. Suggest: Add content to this heading or delete it.
+- [[Cliefnotes Academy]]: Empty section: `## Curriculum Map`. Suggest: Add content to this heading or delete it.
 - [[cherry-picks]]: Empty section: `## Tier 1 — Quick Wins (High Impact, Low Effort)`. Suggest: Add content to this heading or delete it.
 - [[cherry-picks]]: Empty section: `## Tier 2 — Medium Effort, High Value`. Suggest: Add content to this heading or delete it.
 - [[cherry-picks]]: Empty section: `## Tier 3 — Bigger Features Worth Planning`. Suggest: Add content to this heading or delete it.
@@ -66,6 +67,11 @@ See [[tiling-report-2026-05-26]] for the full pair listing.
 - [[Hot Cache]]: Empty section: `# Recent Context`. Suggest: Add content to this heading or delete it.
 - [[SVG Diagram Style Guide]]: Empty section: `## Color Palette`. Suggest: Add content to this heading or delete it.
 - [[SVG Diagram Style Guide]]: Empty section: `## Layout Primitives`. Suggest: Add content to this heading or delete it.
+- [[Interpreted Context Methodology]]: Empty section: `## Reusable Bootstrap Files`. Suggest: Add content to this heading or delete it.
+- [[Interpreted Context Methodology]]: Empty section: `# Current Project`. Suggest: Add content to this heading or delete it.
+- [[Implementation Playbooks]]: Empty section: `## Course Curriculum`. Suggest: Add content to this heading or delete it.
+- [[Building Your Stack]]: Empty section: `## Course Curriculum`. Suggest: Add content to this heading or delete it.
+- [[The Foundation]]: Empty section: `## Course Curriculum`. Suggest: Add content to this heading or delete it.
 - [[Claudian-YishenTu]]: Empty section: `## Key Features`. Suggest: Add content to this heading or delete it.
 - [[Ar9av-obsidian-wiki]]: Empty section: `## Key Innovations`. Suggest: Add content to this heading or delete it.
 - [[rvk7895-llm-knowledge-bases]]: Empty section: `## Key Innovations`. Suggest: Add content to this heading or delete it.
@@ -93,7 +99,10 @@ See [[tiling-report-2026-05-26]] for the full pair listing.
 - [[Search Experience Optimization]]: Missing source citations. Suggest: Add raw sources to `sources:` frontmatter or wikilink to source pages.
 - [[E-commerce SEO]]: Missing source citations. Suggest: Add raw sources to `sources:` frontmatter or wikilink to source pages.
 - [[Pro Hub Challenge]]: Missing source citations. Suggest: Add raw sources to `sources:` frontmatter or wikilink to source pages.
+- [[Product Requirements Document]]: Missing source citations. Suggest: Add raw sources to `sources:` frontmatter or wikilink to source pages.
+- [[AI Inbox Automation]]: Missing source citations. Suggest: Add raw sources to `sources:` frontmatter or wikilink to source pages.
 - [[Source-First Synthesis]]: Missing source citations. Suggest: Add raw sources to `sources:` frontmatter or wikilink to source pages.
+- [[Web Animations]]: Missing source citations. Suggest: Add raw sources to `sources:` frontmatter or wikilink to source pages.
 - [[SEO Drift Monitoring]]: Missing source citations. Suggest: Add raw sources to `sources:` frontmatter or wikilink to source pages.
 - [[LLM Wiki Pattern]]: Missing source citations. Suggest: Add raw sources to `sources:` frontmatter or wikilink to source pages.
 - [[LLM Wiki Pattern]]: Contradiction not flagged with `> [!contradiction]`. Suggest: Use `> [!contradiction]` callout to document conflicting claims.
@@ -105,9 +114,15 @@ See [[tiling-report-2026-05-26]] for the full pair listing.
 - [[Persistent Wiki Artifact]]: Contradiction not flagged with `> [!contradiction]`. Suggest: Use `> [!contradiction]` callout to document conflicting claims.
 - [[Semantic Topic Clustering]]: Missing source citations. Suggest: Add raw sources to `sources:` frontmatter or wikilink to source pages.
 - [[Query-Time Retrieval]]: Missing source citations. Suggest: Add raw sources to `sources:` frontmatter or wikilink to source pages.
+- [[Tool Ladder]]: Missing source citations. Suggest: Add raw sources to `sources:` frontmatter or wikilink to source pages.
+- [[Claude Code]]: Missing source citations. Suggest: Add raw sources to `sources:` frontmatter or wikilink to source pages.
+- [[Claude Desktop]]: Missing source citations. Suggest: Add raw sources to `sources:` frontmatter or wikilink to source pages.
+- [[Prompt Engineering]]: Missing source citations. Suggest: Add raw sources to `sources:` frontmatter or wikilink to source pages.
+- [[Remote Sessions]]: Missing source citations. Suggest: Add raw sources to `sources:` frontmatter or wikilink to source pages.
 - [[wiki-query]]: Missing source citations. Suggest: Add raw sources to `sources:` frontmatter or wikilink to source pages.
 - [[DragonScale Memory]]: Missing source citations. Suggest: Add raw sources to `sources:` frontmatter or wikilink to source pages.
 - [[DragonScale Memory]]: Contradiction not flagged with `> [!contradiction]`. Suggest: Use `> [!contradiction]` callout to document conflicting claims.
+- [[Interpreted Context Methodology]]: Uncertainty not flagged with `> [!gap]`. Suggest: Use the standard Obsidian callout `> [!gap]` to document gaps or uncertainty.
 - [[YuNaga224-obsidian-memory-mcp]]: Contradiction not flagged with `> [!contradiction]`. Suggest: Use `> [!contradiction]` callout to document conflicting claims.
 - [[Claude SEO]]: Missing source citations. Suggest: Add raw sources to `sources:` frontmatter or wikilink to source pages.
 - [[Andrej Karpathy]]: Missing source citations. Suggest: Add raw sources to `sources:` frontmatter or wikilink to source pages.

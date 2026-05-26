@@ -31,6 +31,15 @@ Navigation: [[overview]] | [[log]] | [[hot]] | [[dashboard]] | [[Wiki Map]] | [[
 
 ## Concepts
 
+- [[Cliefnotes Academy]] — central training curriculum for AI agent system architectures and workspace setups (status: evergreen)
+- [[Tool Ladder]] — 4-level scoping framework for selecting the simplest necessary tool architecture (status: evergreen)
+- [[Product Requirements Document]] — structured Markdown specification acting as stateful agent build context (status: evergreen)
+- [[Prompt Engineering]] — four-pillar prompt structure (Role, Context, Task, Format) and sequencing rules (status: evergreen)
+- [[Claude Code]] — official Anthropic terminal-based coding agent and interactive plan execution (status: evergreen)
+- [[Claude Desktop]] — Anthropic's official desktop application wrapper, serving as a Thinking Partner in ICM (status: evergreen)
+- [[Remote Sessions]] — cross-device persistence and mobile workflow setups using terminal multiplexers (status: evergreen)
+- [[Web Animations]] — workflow for translating Illustrator assets into React/Remotion keyframes via Claude Code (status: evergreen)
+- [[AI Inbox Automation]] — Low-code n8n backend polling, sorting, and scheduling automated research cronjobs (status: evergreen)
 - [[LLM Wiki Pattern]] — the pattern for building persistent, compounding knowledge bases using LLMs (status: mature)
 - [[Hot Cache]] — ~500-word session context file, updated after every ingest and session (status: mature)
 - [[Compounding Knowledge]] — why wiki knowledge grows more valuable over time, unlike RAG (status: mature)
@@ -70,6 +79,9 @@ Navigation: [[overview]] | [[log]] | [[hot]] | [[dashboard]] | [[Wiki Map]] | [[
 
 ## Sources
 
+- [[The Foundation]] — 2026-05-26 | 11 lessons on core Interpreted Context Methodology and local agent setup
+- [[Building Your Stack]] — 2026-05-26 | 8 lessons on the Tool Ladder, PRDs, and remote multiplexer setups
+- [[Implementation Playbooks]] — 2026-05-26 | 11 lessons on web animations, scraping, and n8n inbox workflows
 - [[claude-obsidian-ecosystem-research]] — 2026-04-08 | web research across 16+ repos | 12 wiki pages total (4 entity gaps filled 2026-05-24)
 - [[rindig-interpreted-context-methodology]] — 2026-05-24 | ICM GitHub README | 3 wiki pages created
 
