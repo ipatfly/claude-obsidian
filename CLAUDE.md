@@ -70,10 +70,11 @@ Do NOT read the wiki for general coding questions or things already in this proj
 | `/autoresearch [topic]` | Autonomous research loop: search, fetch, synthesize, file |
 | `/canvas` | Visual layer: add images, PDFs, notes to Obsidian canvas |
 
-## MCP (Optional)
+## MCP
 
-If you configured the MCP server, Claude can read and write vault notes directly.
-See `.claude/skills/wiki/references/mcp-setup.md` for setup instructions.
+The Local REST API and MCP server are configured for your use in Obsidian. Always check if the MCP server is currently running and reachable. If it is not running, nudge Patrick: "To be able to use your MCP server you need to start Obsidian."
+
+See `.claude/skills/wiki/references/mcp-setup.md` for detailed setup and configuration instructions.
 
 ## Personal Setup (ipatfly)
 

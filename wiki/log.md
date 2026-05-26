@@ -11,14 +11,7 @@ related:
   - "[[hot]]"
   - "[[overview]]"
   - "[[sources/_index]]"
----## 2026-05-26 ingest | Cliefnotes Academy (30 Lessons)
-- Source: `_raw/` (30 curriculum files for Foundation, Stack, Playbooks)
-- Summary: [[The Foundation]], [[Building Your Stack]], [[Implementation Playbooks]]
-- Pages created: [[Cliefnotes Academy]], [[Tool Ladder]], [[Product Requirements Document]], [[Prompt Engineering]], [[Claude Code]], [[Claude Desktop]], [[Remote Sessions]], [[Web Animations]], [[AI Inbox Automation]]
-- Pages updated: [[Interpreted Context Methodology]], [[index]], [[concepts/_index]]
-- Key insight: Massively scaled the vault's agentic AI system architecture playbooks and established a custom Relevance System (core/secondary/archived) with exact signal-to-noise metrics to filter out high-volume social media noise.
-
-
+---
 
 # Operation Log
 
@@ -31,6 +24,13 @@ Entry format: `## [YYYY-MM-DD] operation | Title`
 Parse recent entries: `grep "^## \[" wiki/log.md | head -10`
 
 ---
+
+## [2026-05-26] ingest | Cliefnotes Academy (30 Lessons)
+- Source: `_raw/` (30 curriculum files for Foundation, Stack, Playbooks)
+- Summary: [[The Foundation]], [[Building Your Stack]], [[Implementation Playbooks]]
+- Pages created: [[Cliefnotes Academy]], [[Tool Ladder]], [[Product Requirements Document]], [[Prompt Engineering]], [[Claude Code]], [[Claude Desktop]], [[Remote Sessions]], [[Web Animations]], [[AI Inbox Automation]]
+- Pages updated: [[Interpreted Context Methodology]], [[index]], [[concepts/_index]]
+- Key insight: Massively scaled the vault's agentic AI system architecture playbooks and established a custom Relevance System (core/secondary/archived) with exact signal-to-noise metrics to filter out high-volume social media noise.
 
 ## [2026-05-24] batch-ingest | RinDig ICM + ecosystem research gap fill
 - Sources: `_raw/RinDig Interpreted-Context-Methdology.md`, `_raw/claude-obsidian-ecosystem-research.md`
