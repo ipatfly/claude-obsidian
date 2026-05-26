@@ -7,7 +7,6 @@
 ---
 
 ## Active Configuration (ipatfly)
-
 > This section documents the choices made for this vault. Generic alternatives remain in the sections below.
 
 ### Vault

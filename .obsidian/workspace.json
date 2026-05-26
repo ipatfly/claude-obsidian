@@ -37,12 +37,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "wiki/index.md",
+                "file": "WIKI.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "index"
+              "title": "WIKI"
             }
           }
         ],
@@ -211,13 +211,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "wiki/index.md",
+                "file": "WIKI.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of index"
+              "title": "Outline of WIKI"
             }
           }
         ],
@@ -249,13 +249,13 @@
   },
   "active": "daa117e496c99f07",
   "lastOpenFiles": [
-    "wiki/concepts/Tool Ladder.md",
+    "wiki/sources/The Foundation.md",
     "wiki/index.md",
+    "wiki/concepts/Tool Ladder.md",
     "wiki/sources/Implementation Playbooks.md",
     "wiki/concepts/Cliefnotes Academy.md",
     "wiki/sources/Building Your Stack.md",
     "wiki/concepts/Interpreted Context Methodology.md",
-    "wiki/sources/The Foundation.md",
     "wiki/overview.md",
     "wiki/entities/Claude SEO.md",
     "wiki/entities/Ar9av-obsidian-wiki.md",
