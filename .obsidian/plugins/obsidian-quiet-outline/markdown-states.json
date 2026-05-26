@@ -18,7 +18,7 @@
     ]
   },
   "wiki/index.md": {
-    "scroll": 63.84992248062016,
+    "scroll": 98.3631007751938,
     "cursor": {
       "from": {
         "line": 83,
@@ -432,7 +432,7 @@
     ]
   },
   "wiki/overview.md": {
-    "scroll": 16.178021978021977,
+    "scroll": 3.8483516483516484,
     "cursor": {
       "from": {
         "line": 17,
@@ -589,7 +589,7 @@
     ]
   },
   "wiki/getting-started.md": {
-    "scroll": 73.60091145833333,
+    "scroll": 84.5479304682634,
     "cursor": {
       "from": {
         "line": 92,
@@ -606,7 +606,7 @@
     ]
   },
   "wiki/meta/dashboard.md": {
-    "scroll": 47.93951801591015,
+    "scroll": 12.567073170731707,
     "cursor": {
       "from": {
         "line": 15,
@@ -663,6 +663,38 @@
       },
       "to": {
         "line": 15,
+        "ch": 0
+      }
+    },
+    "expandedKeys": [
+      "item-1-0"
+    ]
+  },
+  "wiki/log.md": {
+    "scroll": 0,
+    "cursor": {
+      "from": {
+        "line": 0,
+        "ch": 0
+      },
+      "to": {
+        "line": 0,
+        "ch": 0
+      }
+    },
+    "expandedKeys": [
+      "item-1-1"
+    ]
+  },
+  "wiki/hot.md": {
+    "scroll": 0.9279661016949152,
+    "cursor": {
+      "from": {
+        "line": 9,
+        "ch": 0
+      },
+      "to": {
+        "line": 9,
         "ch": 0
       }
     },
