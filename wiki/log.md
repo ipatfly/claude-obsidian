@@ -1,3 +1,9 @@
+## [2026-05-26] ingest | Interpretable Context Methodology Paper
+- Source: `_raw/ingested/2603.16021v2.pdf`
+- Summary: [[interpretable-context-methodology-paper]]
+- Pages created: [[interpretable-context-methodology-paper]]
+- Pages updated: [[Interpreted Context Methodology]], [[Jake Van Clief]]
+- Key insight: Practical guidelines for ICM, emphasizing the 5-layer context hierarchy, specific stage contracts (Inputs/Process/Outputs), and treating the folder structure as a portable, semantic debugger for AI.
 ---
 type: meta
 title: "Operation Log"

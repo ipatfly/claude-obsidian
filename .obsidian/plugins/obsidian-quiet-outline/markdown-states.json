@@ -18,7 +18,7 @@
     ]
   },
   "wiki/index.md": {
-    "scroll": 98.3631007751938,
+    "scroll": 44.991317829457365,
     "cursor": {
       "from": {
         "line": 83,
@@ -50,7 +50,7 @@
     ]
   },
   "wiki/concepts/Interpreted Context Methodology.md": {
-    "scroll": 51.21279761904762,
+    "scroll": 53.21279761904762,
     "cursor": {
       "from": {
         "line": 21,
@@ -432,7 +432,7 @@
     ]
   },
   "wiki/overview.md": {
-    "scroll": 0.9340659340659341,
+    "scroll": 76.1460193452381,
     "cursor": {
       "from": {
         "line": 17,
@@ -527,7 +527,7 @@
     ]
   },
   "wiki/concepts/Tool Ladder.md": {
-    "scroll": 2.8275862068965516,
+    "scroll": 0,
     "cursor": {
       "from": {
         "line": 12,
@@ -623,7 +623,7 @@
     ]
   },
   "wiki/concepts/_index.md": {
-    "scroll": 32.60031007751938,
+    "scroll": 40.51628182356424,
     "cursor": {
       "from": {
         "line": 21,
@@ -725,6 +725,20 @@
       },
       "to": {
         "line": 8,
+        "ch": 0
+      }
+    },
+    "expandedKeys": []
+  },
+  "wiki/sources/interpretable-context-methodology-paper.md": {
+    "scroll": 51.415364583333336,
+    "cursor": {
+      "from": {
+        "line": 16,
+        "ch": 0
+      },
+      "to": {
+        "line": 16,
         "ch": 0
       }
     },

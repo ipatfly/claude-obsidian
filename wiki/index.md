@@ -79,6 +79,7 @@ Navigation: [[overview]] | [[log]] | [[hot]] | [[dashboard]] | [[Wiki Map]] | [[
 
 ## Sources
 
+- [[interpretable-context-methodology-paper]] — 2026-05-26 | Interpretable Context Methodology: Folder Structure as Agent Architecture | PDF full paper
 - [[The Foundation]] — 2026-05-26 | 11 lessons on core Interpreted Context Methodology and local agent setup
 - [[Building Your Stack]] — 2026-05-26 | 8 lessons on the Tool Ladder, PRDs, and remote multiplexer setups
 - [[Implementation Playbooks]] — 2026-05-26 | 11 lessons on web animations, scraping, and n8n inbox workflows

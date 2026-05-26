@@ -733,6 +733,20 @@
         "wiki/hot.md",
         "wiki/concepts/_index.md"
       ]
+    },
+    "_raw/ingested/2603.16021v2.pdf": {
+      "hash": "0f8e220072b8e3c6c00f74c633b76125",
+      "ingested_at": "2026-05-26",
+      "pages_created": [
+        "wiki/sources/interpretable-context-methodology-paper.md"
+      ],
+      "pages_updated": [
+        "wiki/concepts/Interpreted Context Methodology.md",
+        "wiki/entities/Jake Van Clief.md",
+        "wiki/index.md",
+        "wiki/log.md",
+        "wiki/hot.md"
+      ]
     }
   },
   "address_map": {
@@ -760,6 +774,7 @@
     "wiki/concepts/Remote Sessions.md": "c-000023",
     "wiki/concepts/Web Animations.md": "c-000024",
     "wiki/concepts/AI Inbox Automation.md": "c-000025",
-    "wiki/concepts/Claude Desktop.md": "c-000026"
+    "wiki/concepts/Claude Desktop.md": "c-000026",
+    "wiki/sources/interpretable-context-methodology-paper.md": "c-000027"
   }
 }

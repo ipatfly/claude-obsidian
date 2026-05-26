@@ -10,11 +10,13 @@ status: evergreen
 
 # Hot Cache
 
-Last Ingest: 2026-05-26 | Sources: Cliefnotes Academy (30 Lessons)
+Last Ingest: 2026-05-26 | Sources: Cliefnotes Academy (30 Lessons) + ICM Paper
 
 ## Active Context Summary
 
-We have successfully performed a massive ingestion of **30 curriculum lessons** across three major training series:
+We have successfully ingested the full academic paper **[[interpretable-context-methodology-paper|Interpretable Context Methodology: Folder Structure as Agent Architecture]]**. This provides the formal, foundational blueprint for building AI agent architectures entirely out of folders and markdown files, bypassing complex frameworks. Key extracted principles include the 5-Layer Context Hierarchy, precise Stage Contracts (Inputs/Process/Outputs), and treating outputs as readable edit surfaces for humans ("Semantic Debugging").
+
+Prior to this, we performed a massive ingestion of **30 curriculum lessons** across three major training series:
 1. **The Foundation** — Core [[Interpreted Context Methodology]] (ICM) v2 5-layer context stack, prompt engineering, and workspace bootstrap configurations.
 2. **Building Your Stack** — The [[Tool Ladder]] 4-level scoping framework, stateful [[Product Requirements Document|PRDs]], multiplexer [[Remote Sessions]] setups, and mobile AI workflows.
 3. **Implementation Playbooks** — Practical [[Web Animations]] pipeline (Illustrator asset exports) and n8n [[AI Inbox Automation]] engines.
